@@ -5,7 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts "Create heybaby database"
+puts "Create Heybaby database"
 Category.delete_all
-Pool.delete_all
+Task.delete_all
 User.delete_all
+Pregnancy.delete_all
