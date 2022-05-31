@@ -70,7 +70,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_31_105350) do
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.string "assigned_to", default: "mother"
     t.date "start_time"
     t.date "deadline"
