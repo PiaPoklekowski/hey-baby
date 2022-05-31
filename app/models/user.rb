@@ -8,4 +8,12 @@ class User < ApplicationRecord
   has_many :pregnancies_as_partner, class_name: "Pregnancy", foreign_key: :partner_id
 
   validates :email, uniqueness: true
+
+  def pregnancies
+    Pregnancy.where(mother: self).or(Pregnancy.where(partner: self))
+  end
+
+  def current_pregnancy
+    pregnancies.order(due_date: :asc).last
+  end
 end
