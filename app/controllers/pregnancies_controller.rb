@@ -1,0 +1,2 @@
+class PregnanciesController < ApplicationController
+end
