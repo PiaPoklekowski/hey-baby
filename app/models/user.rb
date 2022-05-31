@@ -6,8 +6,11 @@ class User < ApplicationRecord
 
   has_many :pregnancies_as_mother, class_name: "Pregnancy", foreign_key: :mother_id
   has_many :pregnancies_as_partner, class_name: "Pregnancy", foreign_key: :partner_id
+  has_one :profile
 
   validates :email, uniqueness: true
+
+  before_create :add_profile
 
   def pregnancies
     Pregnancy.where(mother: self).or(Pregnancy.where(partner: self))
@@ -15,5 +18,12 @@ class User < ApplicationRecord
 
   def current_pregnancy
     pregnancies.order(due_date: :asc).last
+  end
+
+  private
+
+  def add_profile
+    @profile = Profile.new
+    self.profile = @profile
   end
 end
