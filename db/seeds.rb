@@ -10,3 +10,8 @@ Category.delete_all
 Task.delete_all
 User.delete_all
 Pregnancy.delete_all
+
+  User.create(
+    email: "heybabyberlin@gmail.com",
+    password: "123456"
+  )
