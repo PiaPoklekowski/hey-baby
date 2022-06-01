@@ -1,0 +1,10 @@
+.files-container {
+  display: grid;
+  grid-template-columns: repeat(5, 140px);
+  grid-column-gap: 10px;
+  justify-content: space-between;
+  width: 410px;
+  overflow: scroll;
+  margin-left: -24px;
+  padding-left: 24px;
+}

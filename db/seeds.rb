@@ -34,7 +34,7 @@ p pregancy_one
 CATEGORIES.each do |category|
   Category.create!(
     name: category,
-    description: category
+    description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua"
   )
 end
 
