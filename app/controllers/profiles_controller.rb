@@ -1,15 +1,11 @@
 class ProfilesController < ApplicationController
-  ROLES = ["Mother", "Partner"]
-
-  validates :role, inclusion: { in: ROLES }
-
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find_by(user: current_user)
     authorize @profile
   end
 
   def update
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find(params[:user_id])
     authorize @profile
     @profile.update(profile_params)
     redirect_to new_pregnancy_path

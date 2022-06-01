@@ -3,7 +3,7 @@
     <%= f.input :last_name, label: false, placeholder: "last name" %>
     <%= f.input :address, label: false, placeholder: "address" %>
     <%= f.input :birthdate, label: false, placeholder: "birthdate" %>
-    <%= f.input :role, label: false, placeholder: "role" %>
+    <%= f.input :role, collection: Profile::ROLES, label: false, placeholder: "role" %>
     <%= f.button :submit, "Next", class: 'btn btn-primary' %>
   <% end %>
   <br>
