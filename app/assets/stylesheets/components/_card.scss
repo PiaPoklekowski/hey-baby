@@ -76,3 +76,26 @@
     }
   }
 }
+
+.file-card {
+  background-color: white;
+  border-radius: $border-radius-10;
+  box-shadow: $box-shadow;
+
+  img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: $border-radius-10;
+    border-top-left-radius: $border-radius-10;
+  }
+
+  div {
+    border-top: 1px solid $blue-gray;
+  }
+
+  p {
+    padding: 16px 20px;
+    margin-bottom: 0;
+  }
+}

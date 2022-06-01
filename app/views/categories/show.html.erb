@@ -3,4 +3,47 @@
     <h1><%= @category.name %></h1>
     <p><%= @category.description %></p>
   </div>
+  <div>
+    <% @category.tasks.each do |task| %>
+    <div class="card card-task">
+      <div class="title">
+        <h4><%= task.name %></h4>
+        <p><%= task.start_time %> - <%= task.deadline %> weeks</p>
+      </div>
+      <div class="details">
+          <div class="completed">
+            <i class="fa-solid fa-check"></i>
+            <p>DONE</p>
+          </div>
+          <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <hr class="mt-4 mb-4">
+  <div>
+    <p><strong>MY FILES</strong></p>
+      <div class="files-container">
+        <div class="file-card">
+          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
+          <div>
+            <p>file_name.pdf</p>
+          </div>
+        </div>
+
+        <div class="file-card">
+          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
+          <div>
+            <p>file_name.pdf</p>
+          </div>
+        </div>
+
+        <div class="file-card">
+          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
+          <div>
+            <p>file_name.pdf</p>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
