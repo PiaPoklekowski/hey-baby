@@ -5,4 +5,17 @@ class PregnancyPolicy < ApplicationPolicy
     #   scope.all
     # end
   end
+
+  def new?
+    # if @record.user.role == "mother"
+    #   true
+    # else
+    #   false
+    # end
+    true
+  end
+
+  def create?
+    true
+  end
 end

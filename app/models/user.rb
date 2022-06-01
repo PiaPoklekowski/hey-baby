@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :pregnancies_as_mother, class_name: "Pregnancy", foreign_key: :mother_id
   has_many :pregnancies_as_partner, class_name: "Pregnancy", foreign_key: :partner_id
-  has_one :profile, dependent: :destroy
+  has_one :profile
 
   validates :email, uniqueness: true
 
@@ -23,9 +23,8 @@ class User < ApplicationRecord
   # private
 
   def add_profile
-    @profile = Profile.new(role: "Mother")
+    @profile = Profile.new(first_name: "", last_name: "", address: "", birthdate: "", role: "Mother")
     self.profile = @profile
-    #
-    # @profile.save
+    @profile.save
   end
 end
