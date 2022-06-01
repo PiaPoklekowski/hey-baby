@@ -12,24 +12,8 @@ Pregnancy.destroy_all
 User.destroy_all
 
 CATEGORIES = ["Birth certificate",
-  "Breastfeeding",
   "Child benefit",
-  "Embassy",
-  "Gynecologist",
-  "Health",
-  "Health Insurance",
-  "Hospital",
-  "Kita - Kindergarten",
-  "Maternity Allowance",
-  "Maternity Leave",
-  "Midwive",
-  "Organisational",
-  "Parental Allowance",
-  "Parental Leave",
-  "Paternity",
-  "Pediatrician",
-  "Photoshoot",
-  "Prenatal Classes"]
+  "Hospital"]
 
 user_one = User.create!(
     email: "heybabyberlin@gmail.com",
@@ -59,63 +43,52 @@ child_benefit_category = Category.find_by(name: "Child benefit")
 birth_certificate_category = Category.find_by(name: "Birth certificate")
 
 Task.create!(
-  completed: false,
   name: "Find an hospital",
   description: "If you wish to give birth at a birthing centre or elsewhere with a midwife in attendance, early application is needed.
-                You can register later at a hospital. This registration is not binding.",
+  You can register later at a hospital. This registration is not binding.",
   start_time: 20,
   deadline: 22,
   category: hospital_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
 
 Task.create!(
-  completed: false,
   name: "Book an appointment",
   description: "Book an appointment for the registration at the hospital of your choice",
   start_time: 22,
   deadline: 25,
   category: hospital_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
 
 Task.create!(
-  completed: false,
   name: "Visit and register in you Hospital",
   description: "Onsite interview with a Midwife. Explain your birth type wishes and questions (waterbirth, natural birth..., room wishes)",
   start_time: 22,
   deadline: 25,
   category: hospital_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
 
 Task.create!(
-  completed: false,
   name: "Applying for child benefit (Kindergeld)",
   description: "As soon as the birth certificate is available - Create! an account and fill in the form, print, sign and scan and send it to the given address",
   start_time: 44,
   form_url_de: "https://web.arbeitsagentur.de/opal/kgo-antraggeburt-ui/auswahl",
   category: child_benefit_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
 
 Task.create!(
-  completed: false,
   name: "Find mother & father birth certificates",
   description: "Ask in your homecountry",
   start_time: 30,
   deadline: 36,
   category: birth_certificate_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
 
 Task.create!(
-  completed: false,
   name: "Registering the child to the registry office (Standesamt)",
   description: "Within a week after the birth, register your baby to the registery office in which your baby is born or directly at the hospital. They will issue the birth certificate.
                 Required documents:
@@ -129,6 +102,5 @@ Task.create!(
   form_url_de: "https://drive.google.com/file/d/1VkinWa9dQFZGq0KeL-FRjqTU7_-uRa_X/view?usp=sharing",
   form_url_en: "https://drive.google.com/file/d/1l03b7gN0ovwR5dikkgpGN8BmsYJ92AO3/view?usp=sharing",
   category: birth_certificate_category,
-  pregnancy: pregancy_one,
-  assigned_to: "mother"
+  pregnancy: pregancy_one
 )
