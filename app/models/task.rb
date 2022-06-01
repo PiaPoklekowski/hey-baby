@@ -7,5 +7,4 @@ class Task < ApplicationRecord
   # validates :completed, presence: true
   validates :assigned_to, presence: true
   validates :start_time, presence: true
-
 end

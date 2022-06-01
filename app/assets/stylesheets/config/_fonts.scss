@@ -5,7 +5,7 @@
 // Define fonts for body and headers
 $body-font: 'Plus Jakarta Sans', 'sans-serif';
 $headers-font: 'masqualero', 'sans-serif';
-$headers-font-weight: 700 !important;
+$headers-font-weight: 700;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -22,12 +22,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h6 {
-  font-family: $headers-font !important;
+  font-family: $headers-font;
 }
 
 h4, h5, p {
-  font-family: $body-font !important;
+  font-family: $body-font;
 }
+
+$font-size-12: 0.75rem;
+$font-size-14: 0.875rem;
 
 h1 {
   font-size: 2.75rem;
@@ -48,7 +51,5 @@ h4 {
 }
 
 h5, h6 {
-  font-size: 0.875rem;
+  font-size: $font-size-14;
 }
-
-$font-size-12: 0.75rem;
