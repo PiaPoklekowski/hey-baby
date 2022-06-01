@@ -14,3 +14,14 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+a {
+  text-decoration: none;
+  color: $dark-blue;
+}
+
+hr {
+  background-color: #FFE8E7;
+  opacity: 1;
+  height: 2px !important;
+}

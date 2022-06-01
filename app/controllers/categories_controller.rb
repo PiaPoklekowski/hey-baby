@@ -3,4 +3,9 @@ class CategoriesController < ApplicationController
     @categories = policy_scope(Category)
     @categories = Category.all
   end
+
+  def show
+    @category = Category.find(params[:id])
+    authorize @category
+  end
 end
