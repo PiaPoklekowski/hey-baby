@@ -10,3 +10,41 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-bottom {
+  background-color: $light-orange;
+  box-shadow: $box-shadow;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 12px 24px 12px 24px;
+    margin-bottom: 0;
+  }
+
+  li {
+    font-size: 9px;
+    letter-spacing: .5px;
+    text-align: center;
+  }
+
+  a {
+    color: $black;
+    padding: 4px 0 0 0;
+  }
+
+  i {
+    font-size: 16px;
+  }
+
+  .active {
+    color: $bright-orange;
+    a {
+      color: $bright-orange;
+    }
+  }
+}
