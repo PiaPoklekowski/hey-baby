@@ -4,4 +4,9 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     # @tasks = Task.find(params[:category_id])
   end
+
+  def show
+    @category = Category.find(params[:id])
+    authorize @category
+  end
 end

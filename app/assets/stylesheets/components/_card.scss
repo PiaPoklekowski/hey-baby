@@ -10,6 +10,10 @@
   border: none;
   margin-bottom: 8px;
 
+  h4 {
+    color: $black;
+  }
+
   .details, .completed {
     align-items: center;
     display: flex;

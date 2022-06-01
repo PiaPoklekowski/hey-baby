@@ -1,19 +1,21 @@
 <div class="container">
   <h1>Categories</h1>
   <% @categories.each do |category| %>
-    <div class="card card-category">
-      <div class="title">
-        <i class="fa-solid fa-layer-group"></i>
-        <h4><%= category.name %></h4>
-      </div>
-      <%# if statement %>
-      <div class="details">
-        <div class="completed">
-          <i class="fa-solid fa-check"></i>
-          <p>DONE</p>
+    <%= link_to category_path(category) do %>
+      <div class="card card-category">
+        <div class="title">
+          <i class="fa-solid fa-layer-group"></i>
+          <h4><%= category.name %></h4>
         </div>
-        <i class="fa-solid fa-angle-right"></i>
+        <%# if statement %>
+        <div class="details">
+          <div class="completed">
+            <i class="fa-solid fa-check"></i>
+            <p>DONE</p>
+          </div>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
