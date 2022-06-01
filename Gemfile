@@ -60,6 +60,8 @@ group :development, :test do
 
   gem "dotenv-rails", groups: [:development, :test]
 
+  gem "cloudinary"
+
 end
 
 group :development do
