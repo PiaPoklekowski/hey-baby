@@ -1,16 +1,18 @@
-<h1>Categories</h1>
-<div class="card">
+<div class="container">
+  <h1>Categories</h1>
   <% @categories.each do |category| %>
-    <div>
-      <i class="fa-solid fa-layer-group category"></i>
-      <h3><%= category.name %></h3>
-    </div>
-    <div>
-      <div class="completed">
-        <i class="fa-solid fa-check"></i>
-        <p>DONE</p>
+    <div class="card card-category">
+      <div class="title">
+        <i class="fa-solid fa-layer-group"></i>
+        <h4><%= category.name %></h4>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
+      <div class="details">
+        <div class="completed">
+          <i class="fa-solid fa-check"></i>
+          <p>DONE</p>
+        </div>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
     </div>
   <% end %>
 </div>
