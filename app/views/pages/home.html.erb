@@ -1,2 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<p>Due Date:</p>
+<%= current_user.pregnancies.last.due_date %>
+<p>Week of pregnancy</p>
+<%= current_user.pregnancies.last.week_of_pregnancy %>
