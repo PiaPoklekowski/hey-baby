@@ -1,1 +1,16 @@
 <h1>Categories</h1>
+<div class="card">
+  <% @categories.each do |category| %>
+    <div>
+      <i class="fa-solid fa-layer-group category"></i>
+      <h3><%= category.name %></h3>
+    </div>
+    <div>
+      <div class="completed">
+        <i class="fa-solid fa-check"></i>
+        <p>DONE</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,32 @@
+.card {
+  background-color: white;
+  border-radius: $border-radius-10;
+  padding: 24px 24px 24px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $box-shadow;
+
+  div {
+    align-items: center;
+    display: flex;
+  }
+
+  .completed i {
+    font-size: 10px;
+    background-color: $dark-blue;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    padding: 4px;
+    width: 17px;
+    height: 17px;
+  }
+
+  .completed p {
+    font-size: $font-size-12;
+    color: $dark-blue;
+    font-weight: bold;
+  }
+}
