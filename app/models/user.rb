@@ -20,10 +20,12 @@ class User < ApplicationRecord
     pregnancies.order(due_date: :asc).last
   end
 
-  private
+  # private
 
   def add_profile
-    @profile = Profile.new
+    @profile = Profile.new(first_name: "", last_name: "", address: "", birthdate: "", role: "Mother")
     self.profile = @profile
+    #
+    @profile.save
   end
 end
