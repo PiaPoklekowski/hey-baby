@@ -8,5 +8,4 @@ class Task < ApplicationRecord
   validates :assigned_to, presence: true
   validates :start_time, presence: true
   validates :deadline, presence: true
-
 end
