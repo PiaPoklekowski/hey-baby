@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="mb-5 mt-5">Important Contacts</h1>
+  <%= simple_form_for [@important_contact] do |f| %>
+    <%= f.input :name, label: false, placeholder: "Name" %>
+    <%= f.input :address, label: false, placeholder: "Address" %>
+    <%= f.input :phone_number, label: false, placeholder: "Phone number" %>
+    <%= f.input :email, label: false, placeholder: "Email" %>
+    <%= f.button :submit, "To my dashboard", class: 'btn btn-primary' %>
+    <br>
+    <%= f.button :submit, "Skip", class: 'btn btn-secondary mt-3' %>
+  <% end %>
+</div>
