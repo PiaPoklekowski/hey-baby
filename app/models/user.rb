@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :pregnancies_as_mother, class_name: "Pregnancy", foreign_key: :mother_id
   has_many :pregnancies_as_partner, class_name: "Pregnancy", foreign_key: :partner_id
-  has_one :profile
+  has_one :profile, dependent: :destroy
 
   validates :email, uniqueness: true
 
