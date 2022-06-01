@@ -2,7 +2,9 @@
     <%= f.input :first_name, label: false, placeholder: "first name"%>
     <%= f.input :last_name, label: false, placeholder: "last name" %>
     <%= f.input :address, label: false, placeholder: "address" %>
-    <%= f.input :birthdate, label: false, placeholder: "birthdate" %>
+    <%= f.input :birthdate, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 12,
+                              order: [:day, :month, :year], label: false, placeholder: "birthdate" %>
     <%= f.input :role, collection: Profile::ROLES, label: false, placeholder: "role" %>
     <%= f.button :submit, "Next", class: 'btn btn-primary' %>
   <% end %>

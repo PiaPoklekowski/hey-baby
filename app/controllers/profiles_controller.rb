@@ -5,10 +5,14 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    @profile = Profile.find(params[:user_id])
+    @profile = Profile.find_by(user: current_user)
     authorize @profile
     @profile.update(profile_params)
-    redirect_to new_pregnancy_path
+    if @profile.role == "Mother"
+      redirect_to new_pregnancy_path
+    else
+      redirect_to root_path
+    end
   end
 
   private
