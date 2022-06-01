@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_01_102858) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_01_110154) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -100,14 +100,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_102858) do
     t.text "description"
     t.boolean "completed", default: false
     t.string "assigned_to", default: "mother"
-    t.date "start_time"
-    t.date "deadline"
     t.string "form_url_de"
     t.string "form_url_en"
     t.bigint "category_id", null: false
     t.bigint "pregnancy_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "start_time"
+    t.integer "deadline"
     t.index ["category_id"], name: "index_tasks_on_category_id"
     t.index ["pregnancy_id"], name: "index_tasks_on_pregnancy_id"
   end
