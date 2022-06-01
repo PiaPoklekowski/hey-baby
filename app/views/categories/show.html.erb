@@ -23,27 +23,19 @@
   <hr class="mt-4 mb-4">
   <div>
     <p><strong>MY FILES</strong></p>
-      <div class="files-container">
-        <div class="file-card">
-          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
-          <div>
-            <p>file_name.pdf</p>
-          </div>
+        <% if @category.documents.exists? %>
+        <div class="files-container">
+          <% @category.documents.each do |document| %>
+            <div class="file-card">
+              <%# cloudinary %>
+              <div>
+                <p><%= document.name %></p>
+              </div>
+            </div>
+          <% end %>
         </div>
-
-        <div class="file-card">
-          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
-          <div>
-            <p>file_name.pdf</p>
-          </div>
-        </div>
-
-        <div class="file-card">
-          <img src="https://images.unsplash.com/photo-1563479147578-1b7f568bbef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Robbe">
-          <div>
-            <p>file_name.pdf</p>
-          </div>
-        </div>
-      </div>
+        <% else %>
+          <p>You haven't uploaded any files yet</p>
+        <% end %>
   </div>
 </div>
