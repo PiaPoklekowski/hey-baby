@@ -6,27 +6,17 @@
         <i class="fa-solid fa-layer-group"></i>
         <h4><%= category.name %></h4>
       </div>
-      <%# if statement %>
       <div class="details">
-        <%# if %>
+        <% if category.tasks.count == category.tasks.where(completed: true).count %>
           <div class="completed">
             <i class="fa-solid fa-check"></i>
             <p>DONE</p>
           </div>
-        <%# else %>
-          <p class="not-completed"><%# @tasks.count %></p>
-        <%# end %>
-        <i class="fa-solid fa-angle-right"></i>
-      </div>
-    </div>
-
-    <div class="card card-category">
-      <div class="title">
-        <i class="fa-solid fa-layer-group"></i>
-        <h4><%= category.name %></h4>
-      </div>
-      <div class="details">
-        <p class="not-completed">1/4<%# @tasks.count %></p>
+        <% else %>
+          <p class="not-completed">
+            <%= category.tasks.where(completed: true).count %> / <%= category.tasks.count %>
+          </p>
+        <% end %>
         <i class="fa-solid fa-angle-right"></i>
       </div>
     </div>
