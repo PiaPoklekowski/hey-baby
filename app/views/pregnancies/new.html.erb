@@ -1,1 +1,10 @@
-<h1>Pregnancy</h1>
+<div class="container">
+  <h1 class="mb-5 mt-5">Pregnancy</h1>
+  <%= simple_form_for [@pregnancy] do |f| %>
+    <%= f.input :pregnancy_week, label: false, placeholder: "Pregnancy week" %>
+    <%= f.input :baby_nickname, label: false, placeholder: "Baby nickname" %>
+    <%= f.input :gender, label: false, placeholder: "Gender" %>
+    <%= f.input :due_date, as: :date, html5: true %>
+    <%= f.button :submit, "Next", class: 'btn btn-primary' %>
+  <% end %>
+</div>
