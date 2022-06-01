@@ -23,9 +23,9 @@ class User < ApplicationRecord
   # private
 
   def add_profile
-    @profile = Profile.new(first_name: "", last_name: "", address: "", birthdate: "", role: "Mother")
+    @profile = Profile.new(role: "Mother")
     self.profile = @profile
     #
-    @profile.save
+    # @profile.save
   end
 end

@@ -13,7 +13,7 @@ User.destroy_all
 
 CATEGORIES = ["Birth certificate",
   "Breastfeeding",
-  "Child Benefit",
+  "Child benefit",
   "Embassy",
   "Gynecologist",
   "Health",
@@ -55,7 +55,7 @@ CATEGORIES.each do |category|
 end
 
 hospital_category = Category.find_by(name: "Hospital")
-child_benefit_category = Category.find_by(name: "Child Benefit")
+child_benefit_category = Category.find_by(name: "Child benefit")
 birth_certificate_category = Category.find_by(name: "Birth certificate")
 
 Task.create!(
@@ -67,7 +67,7 @@ Task.create!(
   deadline: 22,
   category: hospital_category,
   pregnancy: pregancy_one,
-  assigned_to: user_one
+  assigned_to: "mother"
 )
 
 Task.create!(
@@ -77,7 +77,8 @@ Task.create!(
   start_time: 22,
   deadline: 25,
   category: hospital_category,
-  pregnancy: pregancy_one
+  pregnancy: pregancy_one,
+  assigned_to: "mother"
 )
 
 Task.create!(
@@ -87,7 +88,8 @@ Task.create!(
   start_time: 22,
   deadline: 25,
   category: hospital_category,
-  pregnancy: pregancy_one
+  pregnancy: pregancy_one,
+  assigned_to: "mother"
 )
 
 Task.create!(
@@ -97,7 +99,8 @@ Task.create!(
   start_time: 44,
   form_url_de: "https://web.arbeitsagentur.de/opal/kgo-antraggeburt-ui/auswahl",
   category: child_benefit_category,
-  pregnancy: pregancy_one
+  pregnancy: pregancy_one,
+  assigned_to: "mother"
 )
 
 Task.create!(
@@ -107,7 +110,8 @@ Task.create!(
   start_time: 30,
   deadline: 36,
   category: birth_certificate_category,
-  pregnancy: pregancy_one
+  pregnancy: pregancy_one,
+  assigned_to: "mother"
 )
 
 Task.create!(
@@ -125,5 +129,6 @@ Task.create!(
   form_url_de: "https://drive.google.com/file/d/1VkinWa9dQFZGq0KeL-FRjqTU7_-uRa_X/view?usp=sharing",
   form_url_en: "https://drive.google.com/file/d/1l03b7gN0ovwR5dikkgpGN8BmsYJ92AO3/view?usp=sharing",
   category: birth_certificate_category,
-  pregnancy: pregancy_one
+  pregnancy: pregancy_one,
+  assigned_to: "mother"
 )
