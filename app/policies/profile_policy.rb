@@ -5,4 +5,12 @@ class ProfilePolicy < ApplicationPolicy
     #   scope.all
     # end
   end
+
+  def edit?
+    record.user == @user
+  end
+
+  def update?
+    @record.user == @user
+  end
 end
