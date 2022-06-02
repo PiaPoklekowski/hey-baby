@@ -43,7 +43,7 @@ child_benefit_category = Category.find_by(name: "Child benefit")
 birth_certificate_category = Category.find_by(name: "Birth certificate")
 
 Task.create!(
-  name: "Find an hospital",
+  name: "Find a hospital",
   description: "If you wish to give birth at a birthing centre or elsewhere with a midwife in attendance, early application is needed.
   You can register later at a hospital. This registration is not binding.",
   start_time: 20,
