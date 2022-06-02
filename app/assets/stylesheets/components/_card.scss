@@ -115,10 +115,15 @@
   flex-direction: column;
   height: 140px;
   align-items: flex-start;
+  h4 {
+    font-size: 14px;
+  }
   p {
     font-family: $headers-font;
     color: $bright-orange;
     font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
   }
 }
 

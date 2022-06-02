@@ -3,6 +3,11 @@
   width: 100vw;
   background-size: cover;
   background-position: 50%;
+  h4 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px;
+  }
 }
 
 .content {
@@ -40,4 +45,50 @@
   border-radius: 20px;
   background-color: $light-orange;
   box-shadow: $box-shadow;
+  padding-top: 40px;
+  h1 {
+    text-align: left;
+    font-size: 34px;
+    margin-bottom: 10px;
+    padding-top: 40px;
+  }
+  .padding {
+    padding: 0 24px;
+  }
+}
+
+.your-pregnancy {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  display: grid;
+}
+.week, .due-date {
+  text-align: center;
+  background-color: $mid-orange;
+  box-shadow: none;
+  display: inline-block;
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-family: $headers-font;
+    color: $bright-orange;
+    font-weight: 700;
+  }
+}
+
+.week {
+  p {
+    font-size: 60px;
+  }
+}
+
+.due-date {
+  p:first-of-type {
+    font-size: 40px;
+  }
+  p:last-of-type {
+    font-family: $body-font;
+    text-transform: uppercase;
+  }
 }
