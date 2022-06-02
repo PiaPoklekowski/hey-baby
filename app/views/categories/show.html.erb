@@ -11,10 +11,12 @@
         <p><%= task.start_time %> - <%= task.deadline %> weeks</p>
       </div>
       <div class="details">
+        <% if task.completed == true %>
           <div class="completed">
             <i class="fa-solid fa-check"></i>
             <p>DONE</p>
           </div>
+        <% end %>
           <i class="fa-solid fa-angle-right"></i>
       </div>
     </div>
