@@ -1,9 +1,79 @@
-<%= render "shared/navbar" %>
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%# <p>Due Date:</p> %>
-<%# <%= current_user.pregnancies.last.due_date.strftime("%d %b %Y") %>
-<%# <p>Week of pregnancy</p> %>
-<%# <%= current_user.pregnancies.last.week_of_pregnancy %>
-
-<%= render "shared/navbar_bottom" %>
+<div class="fetus-image" style="background-image: url('<%= asset_url('fetus2.png') %>');">
+  <h4>Hey Baby</h4>
+</div>
+<div class="content">
+  <div class="pregnancy-progress">
+    <h5>Weeks</h5>
+    <div class="weeks-container">
+      <ul class="current-weeks">
+        <li class="active-week">1-4</li>
+        <li>5-8</li>
+        <li>9-13</li>
+      </ul>
+      <ul class="trimester">
+        <li>14-17</li>
+        <li>18-33</li>
+        <li>23-27</li>
+      </ul>
+      <ul class="trimester">
+        <li>28-31</li>
+        <li>32-35</li>
+        <li>36-40</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h1 class="padding">Overview</h1>
+    <div>
+      <div class="cards-header padding">
+        <h5>Important Tasks</h5>
+        <%= link_to 'All Tasks', tasks_path %>
+      </div>
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 140px)">
+        <% @tasks.each do |task| %>
+          <%= link_to "/categories/#{task.category_id}/tasks/#{task.id}" do %>
+            <div class="card card-dashboard">
+              <h4 class="truncate-2-lines"><%= task.name %></h4>
+              <p class="truncate"><%= task.category.name %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="padding">
+      <hr>
+      <div>
+        <div class="cards-header">
+          <h5>Your Pregnancy</h5>
+        </div>
+        <div class="your-pregnancy">
+          <div class="card week">
+            <h4>You are in week</h4>
+            <p><%= current_user.pregnancies.last.week_of_pregnancy %></p>
+          </div>
+          <div class="card due-date">
+            <h4>Your due date</h4>
+            <p><%= current_user.pregnancies.last.due_date.strftime("%d") %></p>
+            <p><%= current_user.pregnancies.last.due_date.strftime("%b %Y") %></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <div class="cards-header">
+          <h5>Important Contacts</h5>
+          <%= link_to 'All Contacts', '#' %>
+        </div>
+        <% @important_contacts.each do |contact| %>
+          <%= link_to '#' do %>
+            <div class="card">
+              <h4><%= contact.name %></h4>
+              <p>+<%= contact.phone_number %></p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/navbar_bottom" %>
+</div>
