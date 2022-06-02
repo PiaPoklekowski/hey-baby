@@ -104,3 +104,113 @@ Task.create!(
   category: birth_certificate_category,
   pregnancy: pregancy_one
 )
+
+puts "Creating 18 hospitals in Berlin..."
+
+Hospital.create!(
+  name: "Klinik für Geburtsmedizin - Charité - Campus Charité Mitte",
+  address: "Charitéplatz1, 10117 Berlin, Mitte",
+  website: "geburtsmedizin.charite.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Klinikum Friedrichshain",
+  address: "Landsberger Allee 49, 10249 Berlin, Friedrichshain",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "Sankt Gertrauden Krankenhaus",
+  address: "Paretzer Str. 11,10713 Berlin, Wilmersdorf",
+  website: "www.sankt-gertrauden.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Klinikum am Urban",
+  address: "Dieffenbachstr. 1, 10967 Berlin, Kreuzberg",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "St. Joseph-Krankenhaus",
+  address: "Bäumerplan 24, 12101 Berlin, Tempelhof",
+  website: "www.sjk.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Auguste-Viktoria Klinikum",
+  address: "Rubensstr. 125, 12157 Berlin",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Klinikum Neukölln",
+  address: "Rudower Str. 48, Kormoranweg 45, 12351 Berlin, Neukölln",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "DRK-Kliniken Köpenick",
+  address: "Salvador-Allende-Str. 2 -8, 12557 Berlin, Köpenick",
+  website: "www.drk-kliniken-berlin.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Klinikum Hellersdorf",
+  address: "Myslowitzer Str. 45, 12621 Berlin. Hellersdorf",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "Helios Kliniken Berlin-Buch",
+  address: "Schwanebecker Chaussee 50, 13125 Berlin, Buch",
+  website: "www.helios-kliniken.de"
+)
+
+Hospital.create!(
+  name: "Maria Heimsuchung Caritas Klinik Pankow",
+  address: "Breitestr. 46 - 47,13187 Berlin, Pankow",
+  website: "www.caritas-klinik-pankow.de"
+)
+
+Hospital.create!(
+  name: "Klinik für Geburtsmedizin - Charité - Campus Virchow Klinikum",
+  address: "Augustenburger Platz 1, 13353 Berlin, Wedding",
+  website: "geburtsmedizin.charite.de"
+)
+
+Hospital.create!(
+  name: "Vivantes Humboldt-Klinikum",
+  address: "Am Nordgraben 2, 13509 Berlin, Reinickendorf",
+  website: "www.vivantes.de"
+)
+
+Hospital.create!(
+  name: "Ev. Waldkrankenhaus Spandau",
+  address: "Stadtrandstr. 555 - 561, 13589 Berlin, Spandau",
+  website: "www.waldkrankenhaus.com"
+)
+
+Hospital.create!(
+  name: "DRK-Kliniken Westend",
+  address: "Spandauer Damm 130, 14050 Berlin, Charlottenburg",
+  website: "www.drk-kliniken-berlin.de"
+)
+
+Hospital.create!(
+  name: "Gemeinschaftskrankenhaus Havelhöhe",
+  address: "Kladower Damm 221, 14089 Berlin, Spandau",
+  website: "www.havelhoehe.de"
+)
+
+Hospital.create!(
+  name: "Krankenhaus Waldfriede",
+  address: "Argentinische Allee 40, 14163 Berlin, Zehlendorf",
+  website: "www.waldfriede.de"
+)
+
+Hospital.create!(
+  name: "Martin-Luther-Krankenhaus",
+  address: "Caspar-Theyß-Str. 27 - 31, 14193 Berlin, Grunewald",
+  website: "www.mlk-berlin.de"
+)
