@@ -1,5 +1,33 @@
 <%= render "shared/navbar" %>
 
-<%= render "map" %>
+<%# Hospital %>
+
+<% if @task.name == "Find a hospital" %>
+  <%= render "map" %>
+<% end %>
+
+<% if @task.name == "Book an appointment" %>
+  <h1><%= "Book an appointment" %></h1>
+<% end %>
+
+<% if @task.name == "Visit and register in your Hospital" %>
+  <h1><%= "Visit and register in your Hospital" %></h1>
+<% end %>
+
+<%# Birth certificate %>
+
+<% if @task.name == "Find mother & father birth certificates" %>
+  <h1><%= "Parents birth certificates" %></h1>
+<% end %>
+
+<% if @task.name == "Registering the child to the registry office (Standesamt)" %>
+  <h1><%= "Registering the child to the registry office (Standesamt)" %></h1>
+<% end %>
+
+<%# Child benefit %>
+
+<% if @task.name == "Applying for child benefit (Kindergeld)" %>
+  <h1><%= "Applying for child benefit (Kindergeld)" %></h1>
+<% end %>
 
 <%= render "shared/navbar_bottom" %>

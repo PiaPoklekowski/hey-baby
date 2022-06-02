@@ -62,7 +62,7 @@ Task.create!(
 )
 
 Task.create!(
-  name: "Visit and register in you Hospital",
+  name: "Visit and register in your Hospital",
   description: "Onsite interview with a Midwife. Explain your birth type wishes and questions (waterbirth, natural birth..., room wishes)",
   start_time: 22,
   deadline: 25,
