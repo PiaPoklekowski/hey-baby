@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
+    authorize @task
     if @task.name == "Find a hospital"
       @user_marker = [current_user.profile].geocoded.map { |address| {lat: address.latitude, lng: address.longitude } }
       @markers = Hospital.all.geocoded.map do |hospital|
