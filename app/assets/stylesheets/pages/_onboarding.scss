@@ -1,0 +1,57 @@
+.onboarding {
+  height: 100vh;
+  background-size: cover;
+}
+
+.onboarding-text {
+  color: white;
+}
+
+.signup-button {
+  background-color: $bright-orange;
+  color: white;
+  border-radius: 18px;
+  width: 100%;
+}
+
+.contact-primary-button {
+  background-color: $orange;
+  color: $dark-red;
+  border-radius: 18px;
+  width: 100%;
+  height: 48px;
+}
+
+.contact-secondary-button {
+  margin-bottom: 24px;
+  color: white;
+  border-radius: 18px;
+  width: 100%;
+  height: 48px;
+}
+
+.logo-text {
+  text-align: center;
+  font-weight: 700;
+  height: 8vh;
+}
+
+.onboarding-content {
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pregnancy-form {
+  align-self: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.button-bottom {
+  align-self: end;
+  width: 100%;
+  margin-top: auto;
+}
