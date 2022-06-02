@@ -15,5 +15,10 @@
     <p class="alert"><%= alert %></p>
     <%= render "shared/flashes" %>
     <%= yield %>
+    <script>
+    document.querySelectorAll('form').forEach(function (el) {
+    el.dataset.turbo = false
+  })
+    </script>
   </body>
 </html>
