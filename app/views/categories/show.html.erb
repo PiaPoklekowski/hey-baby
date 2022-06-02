@@ -29,7 +29,7 @@
         <% if @category.documents.exists? %>
         <div class="scroll-container">
           <% @category.documents.each do |document| %>
-            <div class="file-card">
+            <div class="card-file">
               <%# cloudinary %>
               <div>
                 <p><%= document.name %></p>

@@ -1,4 +1,4 @@
-<div class="fetus-image" style="background-image: url('<%= asset_url('fetus.png') %>');">
+<div class="fetus-image" style="background-image: url('<%= asset_url('fetus2.png') %>');">
   <h4>Hey Baby</h4>
 </div>
 <div class="content">
@@ -33,7 +33,7 @@
         <% @tasks.each do |task| %>
           <div class="card card-dashboard">
             <h4 class="truncate-2-lines"><%= task.name %></h4>
-            <p><%= task.category.name %></p>
+            <p class="truncate"><%= task.category.name %></p>
           </div>
         <% end %>
       </div>
@@ -62,9 +62,14 @@
           <h5>Important Contacts</h5>
           <%= link_to 'All Contacts', '#' %>
         </div>
-        <div class="card">
-          <p>Contacts</p>
-        </div>
+        <% @important_contacts.each do |contact| %>
+          <%= link_to importantcontact_path(contact) do %>
+            <div class="card">
+              <h4><%= contact.name %></h4>
+              <p>+<%= contact.phone_number %></p>
+            </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -5,11 +5,11 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 40px 24px;
+  padding: 40px 24px 80px;
 }
 
 .truncate {
-  width: 20px;
+  width: auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -31,4 +31,5 @@ hr {
   background-color: #FFE8E7;
   opacity: 1;
   height: 2px !important;
+  margin: 30px 0;
 }
