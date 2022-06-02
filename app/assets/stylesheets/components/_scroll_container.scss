@@ -3,8 +3,16 @@
   grid-template-columns: repeat(5, 140px);
   grid-column-gap: 10px;
   justify-content: space-between;
-  width: 410px;
+  width: auto;
   overflow: scroll;
   margin-left: -24px;
   padding-left: 24px;
+}
+
+.weeks-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  overflow: scroll;
+  padding-left: 29vw;
 }

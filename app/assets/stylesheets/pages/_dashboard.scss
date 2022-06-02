@@ -1,0 +1,46 @@
+.fetus-image {
+  height: 50vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.content {
+  margin-top: -108px;
+}
+
+.pregnancy-progress {
+  text-align: center;
+  h4 {
+    text-transform: uppercase;
+  }
+  ul {
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: space-around;
+    border-radius: 30px;
+    padding: 0 16px;
+  }
+  ul.current-weeks {
+    background-color: $bright-orange;
+    color: $orange;;
+  }
+  ul.trimester {
+    background-color: $light-blue;
+    color: $mid-gray;
+  }
+  li {
+    padding: 10px 8px;
+    white-space: nowrap;
+  }
+  .active-week {
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.container-dashboard {
+  border-radius: 20px;
+  background-color: $light-orange;
+  box-shadow: $box-shadow;
+}
