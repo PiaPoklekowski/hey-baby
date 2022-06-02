@@ -31,10 +31,12 @@
       </div>
       <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 140px)">
         <% @tasks.each do |task| %>
-          <div class="card card-dashboard">
-            <h4 class="truncate-2-lines"><%= task.name %></h4>
-            <p class="truncate"><%= task.category.name %></p>
-          </div>
+          <%= link_to category_task_path(task) do %>
+            <div class="card card-dashboard">
+              <h4 class="truncate-2-lines"><%= task.name %></h4>
+              <p class="truncate"><%= task.category.name %></p>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
@@ -63,7 +65,7 @@
           <%= link_to 'All Contacts', '#' %>
         </div>
         <% @important_contacts.each do |contact| %>
-          <%= link_to importantcontact_path(contact) do %>
+          <%= link_to '#' do %>
             <div class="card">
               <h4><%= contact.name %></h4>
               <p>+<%= contact.phone_number %></p>
