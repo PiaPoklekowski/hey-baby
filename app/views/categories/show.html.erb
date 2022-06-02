@@ -6,21 +6,23 @@
   </div>
   <div>
     <% @category.tasks.each do |task| %>
-    <div class="card card-task">
-      <div class="title">
-        <h4><%= task.name %></h4>
-        <p><%= task.start_time %> - <%= task.deadline %> weeks</p>
-      </div>
-      <div class="details">
-        <% if task.completed == true %>
-          <div class="completed">
-            <i class="fa-solid fa-check"></i>
-            <p>DONE</p>
+      <%= link_to category_task_path(task) do %>
+        <div class="card card-task">
+          <div class="title">
+            <h4><%= task.name %></h4>
+            <p><%= task.start_time %> - <%= task.deadline %> weeks</p>
           </div>
-        <% end %>
-          <i class="fa-solid fa-angle-right"></i>
-      </div>
-    </div>
+          <div class="details">
+            <% if task.completed == true %>
+              <div class="completed">
+                <i class="fa-solid fa-check"></i>
+                <p>DONE</p>
+              </div>
+            <% end %>
+              <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
   <hr class="mt-4 mb-4">

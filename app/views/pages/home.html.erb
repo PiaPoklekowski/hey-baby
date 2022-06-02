@@ -31,7 +31,7 @@
       </div>
       <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 140px)">
         <% @tasks.each do |task| %>
-          <%= link_to category_task_path(task) do %>
+          <%= link_to "/categories/#{task.category_id}/tasks/#{task.id}" do %>
             <div class="card card-dashboard">
               <h4 class="truncate-2-lines"><%= task.name %></h4>
               <p class="truncate"><%= task.category.name %></p>
