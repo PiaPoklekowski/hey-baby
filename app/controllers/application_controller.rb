@@ -18,4 +18,9 @@ class ApplicationController < ActionController::Base
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
+
+  # Overwriting the sign_out redirect path method
+  # def after_sign_up_path_for(resource_or_scope)
+  #   edit_profile_path
+  # end
 end
