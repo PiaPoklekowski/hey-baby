@@ -1,3 +1,10 @@
 <%= render "shared/navbar" %>
 <h1> My Documents</h1>
+
+<ul>
+  <% @documents.each do |document| %>
+    <li><%= document.name %></li>
+  <% end %>
+</ul>
+
 <%= render "shared/navbar_bottom" %>

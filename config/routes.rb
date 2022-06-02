@@ -5,11 +5,16 @@ Rails.application.routes.draw do
   get 'profiles/edit', to: 'profiles#edit', as: :edit_profile
   patch 'profiles', to: 'profiles#update'
   get 'profiles', to: 'profiles#show', as: :profile
+  get 'documents' to: 'documents#index', as: :documents
   resources :pregnancies, only: [:new, :create]
   resources :important_contacts, only: [:new, :create]
   resources :categories, only: [:index, :show] do
     resources :tasks, only: [:show, :update]
   end
+  resources :categories , only: [:index, :show] do
+      resources :documents, only: [:index]
+  end
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
