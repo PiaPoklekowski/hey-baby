@@ -1,4 +1,7 @@
 <div class="container onboarding onboarding-text" style="background-image: url('<%= asset_url('contacts_onboarding.png') %>');">
+  <div class="logo-text">
+    <p>HEY BABY</p>
+  </div>
   <h1 class="mb-5 mt-5">Important Contacts</h1>
   <%= simple_form_for [@important_contact] do |f| %>
     <%= f.input :name, label: false, placeholder: "Name" %>
