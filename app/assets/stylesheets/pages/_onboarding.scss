@@ -1,0 +1,29 @@
+.onboarding {
+  height: 100vh;
+  background-size: cover;
+}
+
+.onboarding-text {
+  color: white;
+}
+
+.signup-button {
+  background-color: $bright-orange;
+  color: white;
+  border-radius: 18px;
+  width: 100%;
+}
+
+.contact-primary-button {
+  background-color: $orange;
+  color: $dark-red;
+  border-radius: 18px;
+  width: 100%;
+}
+
+.contact-secondary-button {
+  margin-bottom: 24px;
+  color: white;
+  border-radius: 18px;
+  width: 100%;
+}

@@ -1,10 +1,10 @@
-<div class="container">
+<div class="container onboarding onboarding-text" style="background-image: url('<%= asset_url('pregnancy_onboarding.png') %>');">
   <h1 class="mb-5 mt-5">Pregnancy</h1>
   <%= simple_form_for [@pregnancy] do |f| %>
     <%#= f.input :pregnancy_week, label: false, placeholder: "Pregnancy week" %>
     <%= f.input :baby_nickname, label: false, placeholder: "Baby nickname" %>
     <%= f.input :gender, label: false, placeholder: "Gender" %>
     <%= f.input :due_date, as: :date, html5: true %>
-    <%= f.button :submit, "Next", class: 'btn btn-primary' %>
+    <%= f.button :submit, "Next", class: 'signup-button' %>
   <% end %>
 </div>

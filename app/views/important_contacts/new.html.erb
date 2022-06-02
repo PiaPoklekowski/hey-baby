@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container onboarding onboarding-text" style="background-image: url('<%= asset_url('contacts_onboarding.png') %>');">
   <h1 class="mb-5 mt-5">Important Contacts</h1>
   <%= simple_form_for [@important_contact] do |f| %>
     <%= f.input :name, label: false, placeholder: "Name" %>
     <%= f.input :address, label: false, placeholder: "Address" %>
     <%= f.input :phone_number, label: false, placeholder: "Phone number" %>
     <%= f.input :email, label: false, placeholder: "Email" %>
-    <%= f.button :submit, "To my dashboard", class: 'btn btn-primary' %>
+    <%= f.button :submit, "To my dashboard", class: 'contact-primary-button' %>
     <br>
-    <%= f.button :submit, "Skip", class: 'btn btn-secondary mt-3' %>
+    <%= f.button :submit, "Skip", class: 'contact-secondary-button' %>
   <% end %>
 </div>

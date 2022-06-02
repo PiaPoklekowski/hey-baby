@@ -6,6 +6,6 @@
                               end_year: Date.today.year - 12,
                               order: [:day, :month, :year], label: false, placeholder: "birthdate" %>
     <%= f.input :role, collection: Profile::ROLES, label: false, placeholder: "role" %>
-    <%= f.button :submit, "Next", class: 'btn btn-primary' %>
+    <%= f.button :submit, "Next", class: 'signup-button' %>
   <% end %>
   <br>
