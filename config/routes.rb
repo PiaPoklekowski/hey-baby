@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show] do
     resources :tasks, only: [:show, :update]
   end
+
+  resources :documents, only: [:index]
+  get 'categories/:category_id/documents', to: 'documents#show', as: :document
+
   # Defines the root path route ("/")
   # root "articles#index"
 end

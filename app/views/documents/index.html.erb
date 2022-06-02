@@ -1,3 +1,19 @@
 <%= render "shared/navbar" %>
-<h1> My Documents</h1>
+<div class="container">
+  <h1>My files</h1>
+  <% @categories.each do |category| %>
+    <%= link_to document_path(category) do %>
+      <div class="card card-category">
+        <div class="title">
+          <i class="fa-solid fa-layer-group"></i>
+          <h4><%= category.name %></h4>
+        </div>
+        <div class="details">
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
 <%= render "shared/navbar_bottom" %>
