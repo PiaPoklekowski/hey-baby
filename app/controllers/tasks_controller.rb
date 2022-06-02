@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def show
     @task = Task.find(params[:id])
     profile = current_user.profile
@@ -21,9 +20,9 @@ class TasksController < ApplicationController
       end
       @all_markers = @markers.push(@user_marker)
     end
+  end
 
   def index
     @tasks = policy_scope(Task)
   end
-
 end
