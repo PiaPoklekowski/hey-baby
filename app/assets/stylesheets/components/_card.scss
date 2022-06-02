@@ -14,6 +14,10 @@
     color: $black;
   }
 
+  p {
+    margin-bottom: 0;
+  }
+
   .details, .completed {
     align-items: center;
     display: flex;
@@ -39,7 +43,6 @@
     font-size: $font-size-12;
     color: $dark-blue;
     font-weight: bold;
-    margin-bottom: 0;
   }
 }
 
@@ -108,7 +111,28 @@
   }
 }
 
+.card-dashboard {
+  flex-direction: column;
+  height: 140px;
+  align-items: flex-start;
+  p {
+    font-family: $headers-font;
+    color: $bright-orange;
+    font-weight: 700;
+  }
+}
+
 .cards-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  a {
+    padding: 14px 0;
+    font-weight: 700;
+  }
+  a::after {
+    font-family: "Font Awesome 6 Free";
+    font: var(--fa-font-solid);
+    content: " \f105";
+  }
 }

@@ -5,14 +5,16 @@
   justify-content: space-between;
   width: auto;
   overflow: scroll;
-  margin-left: -24px;
-  padding-left: 24px;
 }
 
 .weeks-container {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  overflow: scroll;
+  overflow: hidden;
   padding-left: 29vw;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
