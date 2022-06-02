@@ -4,6 +4,7 @@ class Pregnancy < ApplicationRecord
   has_many :tasks
   has_many :documents
   has_many :categories, through: :tasks
+  has_many :important_contacts, dependent: :destroy
 
   validates :due_date, presence: true
 
