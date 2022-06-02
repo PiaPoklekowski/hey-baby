@@ -4,13 +4,13 @@ class DocumentPolicy < ApplicationPolicy
     # def resolve
     #   scope.all
     # end
+
+    def resolve
+      scope.all
+    end
   end
 
-  def resolve
-    scope.all
-  end
-
-  def index?
-    @record.user == @user
+  def show?
+    true
   end
 end
