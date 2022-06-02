@@ -12,7 +12,10 @@ class PregnanciesController < ApplicationController
     @pregnancy.mother = current_user
     authorize @pregnancy
     if @pregnancy.save
+      # respond_to do |format|
+      #   format.html { redirect_to new_important_contact_path }
       redirect_to new_important_contact_path
+      # end
     else
       render :new, status: :unprocessable_entity
     end
