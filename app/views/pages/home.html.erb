@@ -1,6 +1,69 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<p>Due Date:</p>
-<%= current_user.pregnancies.last.due_date.strftime("%d %b %Y") %>
-<p>Week of pregnancy</p>
-<%= current_user.pregnancies.last.week_of_pregnancy %>
+<div class="fetus-image" style="background-image: url('<%= asset_url('fetus.png') %>');">
+</div>
+<div class="pregnancy-progress">
+  <h4>Weeks</h4>
+  <ul class="current-weeks">
+    <li>1-4</li>
+    <li>5-8</li>
+    <li>9-13</li>
+  </ul>
+  <ul class="trimester">
+    <li>14-17</li>
+    <li>18-33</li>
+    <li>23-27</li>
+  </ul>
+  <ul class="trimester">
+    <li>28-31</li>
+    <li>32-35</li>
+    <li>36-40</li>
+  </ul>
+</div>
+<div class="container">
+  <h1>Overview</h1>
+  <div>
+    <div class="cards-header">
+      <h6>Important Tasks</h6>
+      <%= link_to 'All Tasks', tasks_path %>
+    </div>
+    <div class="scroll-container">
+      <div class="card">
+        <h4>Title</h4>
+        <p>Category</p>
+      </div>
+      <div class="card">
+        <h4>Title</h4>
+        <p>Category</p>
+      </div>
+      <div class="card">
+        <h4>Title</h4>
+        <p>Category</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <div class="cards-header">
+      <h6>Your Pregnancy</h6>
+    </div>
+    <div>
+      <div class="card week">
+        <h4>You are in week</h4>
+        <p><%= current_user.pregnancies.last.week_of_pregnancy %></p>
+      </div>
+      <div class="card due-date">
+        <h4>Your due date</h4>
+        <p><%= current_user.pregnancies.last.due_date.strftime("%d %b %Y") %></p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="cards-header">
+      <h6>Important Contacts</h6>
+      <%= link_to 'All Contacts', '#' %>
+    </div>
+    <div class="card">
+      <p>Contacts</p>
+    </div>
+  </div>
+</div>

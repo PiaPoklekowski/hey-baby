@@ -26,7 +26,7 @@
   <div>
     <p><strong>MY FILES</strong></p>
         <% if @category.documents.exists? %>
-        <div class="files-container">
+        <div class="scroll-container">
           <% @category.documents.each do |document| %>
             <div class="file-card">
               <%# cloudinary %>
