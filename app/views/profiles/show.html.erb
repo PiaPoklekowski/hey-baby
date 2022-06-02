@@ -1,0 +1,17 @@
+<div class="container onboarding" style="background-image: url('<%= asset_url('profile_onboarding.png') %>')">
+  <div>
+    <h5>HEY BABY</h5>
+
+    <h3>My Profile</h3>
+
+    <div class="#" >
+      <p>Name: <%= @profile.first_name %> <%= @profile.last_name %></p>
+      <p>Address: <%= @profile.address %></p>
+      <p>Birthdate: <%= @profile.birthdate %></p>
+      <p>Role: <%= @profile.role %></p>
+    </div>
+
+  </div>
+</div>
+
+<%= render "shared/navbar_bottom" %>
