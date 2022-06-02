@@ -1,0 +1,19 @@
+<%= render "shared/navbar" %>
+  <div class="container">
+    <h1><%= @category.name %></h1>
+        <% if @category.documents.exists? %>
+        <div class="files-container">
+          <% @category.documents.each do |document| %>
+            <div class="file-card">
+              <%# cloudinary %>
+              <div>
+                <p><%= document.name %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <% else %>
+          <p>You haven't uploaded any files yet</p>
+        <% end %>
+  </div>
+<%= render "shared/navbar_bottom" %>
