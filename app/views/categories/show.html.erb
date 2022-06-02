@@ -5,7 +5,7 @@
   </div>
   <div>
     <% @category.tasks.each do |task| %>
-    <%= link_to category_task_path(task) do %>
+    <%= link_to category_task_path(@category, task) do %>
       <div class="card card-task">
         <div class="title">
           <h4><%= task.name %></h4>
