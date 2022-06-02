@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1, h2, h3, h6 {
   font-family: $headers-font;
+  color: $black;
 }
 
 h4, h5, p {
@@ -39,7 +40,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.75rem;
+  font-size: 2.125rem;
 }
 
 h3 {
@@ -48,9 +49,15 @@ h3 {
 
 h4 {
   font-size: 1rem;
-  line-height: 20px;
+  line-height: 1.25rem;
+  margin-bottom: 0;
 }
 
-h5, h6 {
+h5 {
   font-size: $font-size-14;
+  text-transform: uppercase;
+}
+
+h6 {
+  text-transform: uppercase;
 }

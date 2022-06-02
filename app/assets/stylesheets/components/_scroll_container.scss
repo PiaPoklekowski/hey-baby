@@ -1,10 +1,21 @@
-.files-container {
+.scroll-container {
   display: grid;
-  grid-template-columns: repeat(5, 140px);
+  grid-template-columns: repeat(3, 140px);
   grid-column-gap: 10px;
   justify-content: space-between;
-  width: 410px;
+  width: auto;
   overflow: scroll;
-  margin-left: -24px;
-  padding-left: 24px;
+  padding: 0 20px;
+}
+
+.weeks-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  overflow: hidden;
+  padding-left: 29vw;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
