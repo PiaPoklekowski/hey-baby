@@ -1,11 +1,15 @@
-<%= simple_form_for @profile do |f| %>
-    <%= f.input :first_name, label: false, placeholder: "first name"%>
-    <%= f.input :last_name, label: false, placeholder: "last name" %>
-    <%= f.input :address, label: false, placeholder: "address" %>
-    <%= f.input :birthdate, start_year: Date.today.year - 90,
-                              end_year: Date.today.year - 12,
-                              order: [:day, :month, :year], label: false, placeholder: "birthdate" %>
-    <%= f.input :role, collection: Profile::ROLES, label: false, placeholder: "role" %>
+<div class="pregnancy-form">
+  <%= simple_form_for @profile do |f| %>
+      <%= f.input :first_name, label: false, placeholder: "First name" %>
+      <%= f.input :last_name, label: false, placeholder: "Last name" %>
+      <%= f.input :address, label: false, placeholder: "Address" %>
+      <%= f.input :birthdate, start_year: Date.today.year - 90,
+                                end_year: Date.today.year - 12,
+                                order: [:day, :month, :year], placeholder: "Birthdate" %>
+      <%= f.input :role, collection: Profile::ROLES, label: false, placeholder: "Role" %>
+</div>
+<div class="button-bottom">
     <%= f.button :submit, "Next", class: 'signup-button' %>
   <% end %>
   <br>
+</div>

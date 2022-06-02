@@ -33,7 +33,25 @@
 .logo-text {
   text-align: center;
   font-weight: 700;
+  height: 8vh;
 }
 
 .onboarding-content {
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pregnancy-form {
+  align-self: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.button-bottom {
+  align-self: end;
+  width: 100%;
+  margin-top: auto;
 }
