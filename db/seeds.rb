@@ -108,8 +108,8 @@ Task.create!(
 puts "Creating 18 hospitals in Berlin..."
 
 Hospital.create!(
-  name: "Klinik für Geburtsmedizin - Charité - Campus Charité Mitte",
-  address: "Charitéplatz1, 10117 Berlin, Mitte",
+  name: "Klinik für Geburtsmedizin - Charité",
+  address: "Chariteplatz 1, 10117 Berlin, Mitte",
   website: "geburtsmedizin.charite.de"
 )
 
