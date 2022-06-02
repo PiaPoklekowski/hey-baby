@@ -1,0 +1,5 @@
+<%= form_tag(task_select_path, method: 'put', :id => 'task-select') do %>
+  <% @tasks.each do |task| %>
+    <%= check_box_tag "mark as completed[]", task.id  -%>
+  <% end %>
+<% end %>

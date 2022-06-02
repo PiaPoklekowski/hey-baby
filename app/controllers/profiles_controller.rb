@@ -1,4 +1,11 @@
 class ProfilesController < ApplicationController
+
+  def show
+    @profile = Profile.find_by(user: current_user)
+    authorize @profile
+  end
+
+
   def edit
     @profile = Profile.find_by(user: current_user)
     authorize @profile
