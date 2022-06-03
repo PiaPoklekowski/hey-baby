@@ -1,4 +1,6 @@
 class Pregnancy < ApplicationRecord
+  GENDERS = ["Girl", "Boy", "Undefined"]
+
   belongs_to :mother, class_name: "User"
   belongs_to :partner, class_name: "User", optional: true
   has_many :tasks
@@ -6,6 +8,7 @@ class Pregnancy < ApplicationRecord
   has_many :categories, through: :tasks
   has_many :important_contacts, dependent: :destroy
 
+  validates :gender, inclusion: { in: GENDERS }
   validates :due_date, presence: true
 
   def week_of_pregnancy

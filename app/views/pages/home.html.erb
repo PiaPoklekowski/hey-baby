@@ -29,6 +29,7 @@
         <h5>Important Tasks</h5>
         <%= link_to 'All Tasks', tasks_path %>
       </div>
+      <%= @tasks.count %>
       <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 140px)">
         <% @tasks.each do |task| %>
           <%= link_to "/categories/#{task.category_id}/tasks/#{task.id}" do %>
@@ -46,6 +47,7 @@
         <div class="cards-header">
           <h5>Your Pregnancy</h5>
         </div>
+        <% if current_user.current_pregnancy != nil %>
         <div class="your-pregnancy">
           <div class="card week">
             <h4>You are in week</h4>
@@ -57,6 +59,7 @@
             <p><%= current_user.pregnancies.last.due_date.strftime("%b %Y") %></p>
           </div>
         </div>
+        <% end %>
       </div>
       <hr>
       <div>

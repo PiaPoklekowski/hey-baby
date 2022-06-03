@@ -6,6 +6,8 @@
   <%= render "map" %>
 <% end %>
 
+
+
 <% if @task.name == "Book an appointment" %>
   <h1><%= "Book an appointment" %></h1>
 <% end %>
@@ -30,4 +32,5 @@
   <h1><%= "Applying for child benefit (Kindergeld)" %></h1>
 <% end %>
 
+<%= render "checkbox", locals: {task: @task} %>
 <%= render "shared/navbar_bottom" %>
