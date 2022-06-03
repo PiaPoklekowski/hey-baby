@@ -74,6 +74,7 @@ Task.create!(
   name: "Applying for child benefit (Kindergeld)",
   description: "As soon as the birth certificate is available - Create! an account and fill in the form, print, sign and scan and send it to the given address",
   start_time: 44,
+  deadline: 48,
   form_url_de: "https://web.arbeitsagentur.de/opal/kgo-antraggeburt-ui/auswahl",
   category: child_benefit_category,
   pregnancy: pregancy_one

@@ -6,37 +6,53 @@
   <%= render "map" %>
   <div class="container">
     <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <p><%= @task.description %></p>
   </div>
 <% end %>
 
 <% if @task.name == "Book an appointment" %>
-  <h1><%= @task.name %></h1>
-  <p><%= @task.description %></p>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <p><%= @task.description %></p>
+  </div>
 <% end %>
 
 <% if @task.name == "Visit and register in your Hospital" %>
-  <h1><%= @task.name %></h1>
-  <p><%= @task.description %></p>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <p><%= @task.description %></p>
+  </div>
 <% end %>
 
 <%# Birth certificate %>
 
 <% if @task.name == "Find mother & father birth certificates" %>
-  <h1><%= @task.name %></h1>
-  <p><%= @task.description %></p>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <p><%= @task.description %></p>
+  </div>
 <% end %>
 
 <% if @task.name == "Registering the child to the registry office (Standesamt)" %>
-  <h1><%= @task.name %></h1>
-  <p><%= @task.description %></p>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <p><%= @task.description %></p>
+  </div>
 <% end %>
 
 <%# Child benefit %>
 
 <% if @task.name == "Applying for child benefit (Kindergeld)" %>
-  <h1><%= @task.name %></h1>
-  <p><%= @task.description %></p>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <p><%= @task.description %></p>
+  </div>
 <% end %>
 
 <%= render "shared/navbar_bottom" %>
