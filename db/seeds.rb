@@ -45,12 +45,13 @@ birth_certificate_category = Category.find_by(name: "Birth certificate")
 Task.create!(
   name: "Find a hospital and book an appointment",
   description: "If you wish to give birth at a birthing centre or elsewhere with a midwife in attendance, early application is needed.
-  Book an appointment for the registration at the hospital of your choice. You can register later at a hospital. This registration is not binding.",
+  You can register later at a hospital. This registration is not binding.",
   start_time: 20,
   deadline: 30,
   category: hospital_category,
   pregnancy: pregancy_one
 )
+
 
 Task.create!(
   name: "Visit and register in your Hospital",
@@ -97,13 +98,7 @@ Task.create!(
   pregnancy: pregancy_one
 )
 
-puts "Creating 18 hospitals in Berlin..."
-
-Hospital.create!(
-  name: "Klinik für Geburtsmedizin - Charité",
-  address: "Chariteplatz 1, 10117 Berlin, Mitte",
-  website: "geburtsmedizin.charite.de"
-)
+puts "Creating 17 hospitals in Berlin..."
 
 Hospital.create!(
   name: "Vivantes Klinikum Friedrichshain",
