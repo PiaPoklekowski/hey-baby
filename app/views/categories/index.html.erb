@@ -9,14 +9,15 @@
           <h4><%= category.name %></h4>
         </div>
         <div class="details">
-          <% if category.tasks.count == category.tasks.where(completed: true).count %>
+          <% tasks = category.tasks.where(pregnancy: current_user.current_pregnancy) %>
+          <% if tasks.count == tasks.where(completed: true).count %>
             <div class="completed">
               <i class="fa-solid fa-check"></i>
               <p>DONE</p>
             </div>
           <% else %>
             <p class="not-completed">
-              <%= category.tasks.where(completed: true).count %> / <%= category.tasks.count %>
+              <%= tasks.where(completed: true).count %> / <%= tasks.count %>
             </p>
           <% end %>
           <i class="fa-solid fa-angle-right"></i>
