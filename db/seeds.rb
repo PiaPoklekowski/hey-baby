@@ -26,7 +26,7 @@ user_one = User.create!(
     due_date: Date.new(2022, 12, 15),
     baby_nickname: "Tupac",
     pregnancy_week: 11,
-    gender: "boy",
+    gender: "Boy",
     mother: user_one
   )
 
