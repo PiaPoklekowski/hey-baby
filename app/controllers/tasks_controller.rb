@@ -31,7 +31,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.completed = true
     if @task.save
-      redirect_to root_path
+      redirect_to categories_path
     else
       render :show
     end

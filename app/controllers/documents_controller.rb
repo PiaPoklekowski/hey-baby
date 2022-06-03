@@ -1,5 +1,4 @@
 class DocumentsController < ApplicationController
-
   def index
     @categories = policy_scope(Category)
     @categories = Category.all
