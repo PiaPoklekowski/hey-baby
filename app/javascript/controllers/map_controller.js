@@ -29,13 +29,13 @@ export default class extends Controller {
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "40px"
       customMarker.style.height = "40px"
-      customMarker.addEventListener('click', () => {
-        let content = document.querySelector(".mapboxgl-popup-content")
-        console.log("content:", content)
-        let contentContainer = document.querySelector("#hospital-content")
-        console.log("contentContainer:", contentContainer)
-        contentContainer.appendChild(content)
-      })
+      // customMarker.addEventListener('click', () => {
+      //   let content = document.querySelector(".mapboxgl-popup-content")
+      //   console.log("content:", content)
+      //   let contentContainer = document.querySelector("#hospital-content")
+      //   console.log("contentContainer:", contentContainer)
+      //   contentContainer.appendChild(content)
+      // })
 
       new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
