@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @tasks = @category.tasks.where(pregnancy: current_user.current_pregnancy)
     authorize @category
   end
 end
