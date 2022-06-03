@@ -2,7 +2,7 @@
   <%= simple_form_for @profile do |f| %>
       <%= f.input :first_name, label: false, placeholder: "First name" %>
       <%= f.input :last_name, label: false, placeholder: "Last name" %>
-      <%= f.input :address, label: false, placeholder: "Address",
+      <%= f.input :address, label: false,
                 input_html: {data: {address_autocomplete_target: "address"}, class: "form-control d-none"},
                 wrapper_html: {data: {
                   controller: "address-autocomplete",
