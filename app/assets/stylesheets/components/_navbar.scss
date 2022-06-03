@@ -52,3 +52,38 @@
     }
   }
 }
+
+.navbar-top {
+  background-color: $orange;
+  padding: 0 20px;
+
+  .nav-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+  }
+  a {
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+  }
+
+  .first::before {
+    font-family: "Font Awesome 6 Free";
+    font: var(--fa-font-solid);
+    content: " \f104";
+    margin-right: 10px;
+  }
+
+  .center {
+    grid-column: 2 / span 1;
+    text-align: center;
+  }
+  a:last-of-type {
+    text-align: right;
+    grid-column: 3 / span 1;
+    text-transform: none;
+    font-weight: 500;
+  }
+}
