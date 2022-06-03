@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
+    @category = Category.find(@task.category.id)
     profile = current_user.profile
     if @task.name == "Find a hospital and book an appointment" && profile.geocoded?
       @user_marker =
@@ -24,5 +25,15 @@ class TasksController < ApplicationController
 
   def index
     @tasks = policy_scope(Task)
+  end
+
+  def update
+    @task = Task.find(params[:id])
+    @task.completed = true
+    if @task.save
+      redirect_to categories_path
+    else
+      render :show
+    end
   end
 end

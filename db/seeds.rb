@@ -103,55 +103,55 @@ puts "Creating 17 hospitals in Berlin..."
 Hospital.create!(
   name: "Vivantes Klinikum Friedrichshain",
   address: "Landsberger Allee 49, 10249 Berlin, Friedrichshain",
-  website: "https://termin.vivantes.de/Geburtsmedizin"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Sankt Gertrauden Krankenhaus",
   address: "Paretzer Str. 11,10713 Berlin, Wilmersdorf",
-  website: "https://sankt-gertrauden.de/geburtshilfe/"
+  website: "sankt-gertrauden.de/geburtshilfe/"
 )
 
 Hospital.create!(
   name: "Vivantes Klinikum am Urban",
   address: "Dieffenbachstr. 1, 10967 Berlin, Kreuzberg",
-  website: "https://termin.vivantes.de/Geburtsmedizin"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "St. Joseph-Krankenhaus",
   address: "Bäumerplan 24, 12101 Berlin, Tempelhof",
-  website: "https://www.sjk.de/kliniken/klinik-geburtshilfe/anmeldung-zur-geburt.html"
+  website: "www.sjk.de/kliniken/klinik-geburtshilfe/anmeldung-zur-geburt.html"
 )
 
 Hospital.create!(
   name: "Vivantes Auguste-Viktoria Klinikum",
   address: "Rubensstr. 125, 12157 Berlin",
-  website: "https://termin.vivantes.de/Geburtsmedizin"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Vivantes Klinikum Neukölln",
   address: "Rudower Str. 48, Kormoranweg 45, 12351 Berlin, Neukölln",
-  website: "https://www.vivantes.de/klinikum-neukoelln/fachbereiche/kliniken/geburtsmedizin"
+  website: "www.vivantes.de/klinikum-neukoelln/fachbereiche/kliniken/geburtsmedizin"
 )
 
 Hospital.create!(
   name: "DRK-Kliniken Köpenick",
   address: "Salvador-Allende-Str. 2 -8, 12557 Berlin, Köpenick",
-  website: "https://www.drk-kliniken-berlin.de/geburtshilfe-koepenick"
+  website: "www.drk-kliniken-berlin.de/geburtshilfe-koepenick"
 )
 
 Hospital.create!(
   name: "Helios Kliniken Berlin-Buch",
   address: "Schwanebecker Chaussee 50, 13125 Berlin, Buch",
-  website: "https://www.helios-gesundheit.de/kliniken/berlin-buch/unser-angebot/unsere-fachbereiche/geburtshilfe/anmeldung-zur-geburt/"
+  website: "www.helios-gesundheit.de/kliniken/berlin-buch/unser-angebot/unsere-fachbereiche/geburtshilfe/anmeldung-zur-geburt/"
 )
 
 Hospital.create!(
   name: "Maria Heimsuchung Caritas Klinik Pankow",
   address: "Breitestr. 46 - 47,13187 Berlin, Pankow",
-  website: "https://www.caritas-klinik-pankow.de/unsere-abteilungen/geburtshilfe/"
+  website: "www.caritas-klinik-pankow.de/unsere-abteilungen/geburtshilfe/"
 )
 
 Hospital.create!(
@@ -163,35 +163,35 @@ Hospital.create!(
 Hospital.create!(
   name: "Vivantes Humboldt-Klinikum",
   address: "Am Nordgraben 2, 13509 Berlin, Reinickendorf",
-  website: "https://www.vivantes.de/humboldt-klinikum/geburtsmedizin"
+  website: "www.vivantes.de/humboldt-klinikum/geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Ev. Waldkrankenhaus Spandau",
   address: "Stadtrandstr. 555 - 561, 13589 Berlin, Spandau",
-  website: "https://www.johannesstift-diakonie.de/medizinische-versorgung/evangelisches-waldkrankenhaus-spandau/behandlung/geburtshilfe-neonatologie/anmeldung-zur-geburt/"
+  website: "www.johannesstift-diakonie.de/medizinische-versorgung/evangelisches-waldkrankenhaus-spandau/behandlung/geburtshilfe-neonatologie/anmeldung-zur-geburt/"
 )
 
 Hospital.create!(
   name: "DRK-Kliniken Westend",
   address: "Spandauer Damm 130, 14050 Berlin, Charlottenburg",
-  website: "https://www.drk-kliniken-berlin.de/geburtshilfe-perinatalmedizin-westend"
+  website: "www.drk-kliniken-berlin.de/geburtshilfe-perinatalmedizin-westend"
 )
 
 Hospital.create!(
   name: "Gemeinschaftskrankenhaus Havelhöhe",
   address: "Kladower Damm 221, 14089 Berlin, Spandau",
-  website: "https://www.havelhoehe.de/anmeldung-geburtshilfe.html"
+  website: "www.havelhoehe.de/anmeldung-geburtshilfe.html"
 )
 
 Hospital.create!(
   name: "Krankenhaus Waldfriede",
   address: "Argentinische Allee 40, 14163 Berlin, Zehlendorf",
-  website: "https://www.krankenhaus-waldfriede.de/en/medicine-and-care/expecting-parents/office-and-registration"
+  website: "www.krankenhaus-waldfriede.de/en/medicine-and-care/expecting-parents/office-and-registration"
 )
 
 Hospital.create!(
   name: "Martin-Luther-Krankenhaus",
   address: "Caspar-Theyß-Str. 27 - 31, 14193 Berlin, Grunewald",
-  website: "https://www.pgdiakonie.de/martin-luther-krankenhaus/kliniken-einrichtungen/geburtshilfe/"
+  website: "www.pgdiakonie.de/martin-luther-krankenhaus/kliniken-einrichtungen/geburtshilfe/"
 )

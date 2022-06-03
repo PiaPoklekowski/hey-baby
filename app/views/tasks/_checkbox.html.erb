@@ -1,0 +1,6 @@
+<div class="complete-form">
+  <%= simple_form_for [@category, @task] do |f| %>
+    <%= f.input :completed, class: "checkbox" %>
+    <%= f.button :submit, class: "completed-button" %>
+  <% end %>
+</div>
