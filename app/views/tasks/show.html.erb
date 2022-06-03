@@ -2,22 +2,15 @@
 
 <%# Hospital %>
 
-<% if @task.name == "Find a hospital" %>
+<% if @task.name == "Find a hospital and book an appointment" %>
   <%= render "map" %>
-  <div class="container">
+  <div id="hospital-content" class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <p><%= @task.description %></p>
   </div>
 <% end %>
 
-<% if @task.name == "Book an appointment" %>
-  <div class="container">
-    <h1><%= @task.name %></h1>
-    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
-    <p><%= @task.description %></p>
-  </div>
-<% end %>
 
 <% if @task.name == "Visit and register in your Hospital" %>
   <div class="container">
