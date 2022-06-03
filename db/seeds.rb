@@ -26,7 +26,7 @@ user_one = User.create!(
     due_date: Date.new(2022, 12, 15),
     baby_nickname: "Tupac",
     pregnancy_week: 11,
-    gender: "boy",
+    gender: "Boy",
     mother: user_one
   )
 
@@ -43,23 +43,15 @@ child_benefit_category = Category.find_by(name: "Child benefit")
 birth_certificate_category = Category.find_by(name: "Birth certificate")
 
 Task.create!(
-  name: "Find a hospital",
+  name: "Find a hospital and book an appointment",
   description: "If you wish to give birth at a birthing centre or elsewhere with a midwife in attendance, early application is needed.
   You can register later at a hospital. This registration is not binding.",
   start_time: 20,
-  deadline: 22,
+  deadline: 30,
   category: hospital_category,
   pregnancy: pregancy_one
 )
 
-Task.create!(
-  name: "Book an appointment",
-  description: "Book an appointment for the registration at the hospital of your choice",
-  start_time: 22,
-  deadline: 25,
-  category: hospital_category,
-  pregnancy: pregancy_one
-)
 
 Task.create!(
   name: "Visit and register in your Hospital",
@@ -74,6 +66,7 @@ Task.create!(
   name: "Applying for child benefit (Kindergeld)",
   description: "As soon as the birth certificate is available - Create! an account and fill in the form, print, sign and scan and send it to the given address",
   start_time: 44,
+  deadline: 48,
   form_url_de: "https://web.arbeitsagentur.de/opal/kgo-antraggeburt-ui/auswahl",
   category: child_benefit_category,
   pregnancy: pregancy_one
@@ -105,72 +98,60 @@ Task.create!(
   pregnancy: pregancy_one
 )
 
-puts "Creating 18 hospitals in Berlin..."
-
-Hospital.create!(
-  name: "Klinik für Geburtsmedizin - Charité",
-  address: "Chariteplatz 1, 10117 Berlin, Mitte",
-  website: "geburtsmedizin.charite.de"
-)
+puts "Creating 17 hospitals in Berlin..."
 
 Hospital.create!(
   name: "Vivantes Klinikum Friedrichshain",
   address: "Landsberger Allee 49, 10249 Berlin, Friedrichshain",
-  website: "www.vivantes.de"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Sankt Gertrauden Krankenhaus",
   address: "Paretzer Str. 11,10713 Berlin, Wilmersdorf",
-  website: "www.sankt-gertrauden.de"
+  website: "sankt-gertrauden.de/geburtshilfe/"
 )
 
 Hospital.create!(
   name: "Vivantes Klinikum am Urban",
   address: "Dieffenbachstr. 1, 10967 Berlin, Kreuzberg",
-  website: "www.vivantes.de"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "St. Joseph-Krankenhaus",
   address: "Bäumerplan 24, 12101 Berlin, Tempelhof",
-  website: "www.sjk.de"
+  website: "www.sjk.de/kliniken/klinik-geburtshilfe/anmeldung-zur-geburt.html"
 )
 
 Hospital.create!(
   name: "Vivantes Auguste-Viktoria Klinikum",
   address: "Rubensstr. 125, 12157 Berlin",
-  website: "www.vivantes.de"
+  website: "termin.vivantes.de/Geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Vivantes Klinikum Neukölln",
   address: "Rudower Str. 48, Kormoranweg 45, 12351 Berlin, Neukölln",
-  website: "www.vivantes.de"
+  website: "www.vivantes.de/klinikum-neukoelln/fachbereiche/kliniken/geburtsmedizin"
 )
 
 Hospital.create!(
   name: "DRK-Kliniken Köpenick",
   address: "Salvador-Allende-Str. 2 -8, 12557 Berlin, Köpenick",
-  website: "www.drk-kliniken-berlin.de"
-)
-
-Hospital.create!(
-  name: "Vivantes Klinikum Hellersdorf",
-  address: "Myslowitzer Str. 45, 12621 Berlin. Hellersdorf",
-  website: "www.vivantes.de"
+  website: "www.drk-kliniken-berlin.de/geburtshilfe-koepenick"
 )
 
 Hospital.create!(
   name: "Helios Kliniken Berlin-Buch",
   address: "Schwanebecker Chaussee 50, 13125 Berlin, Buch",
-  website: "www.helios-kliniken.de"
+  website: "www.helios-gesundheit.de/kliniken/berlin-buch/unser-angebot/unsere-fachbereiche/geburtshilfe/anmeldung-zur-geburt/"
 )
 
 Hospital.create!(
   name: "Maria Heimsuchung Caritas Klinik Pankow",
   address: "Breitestr. 46 - 47,13187 Berlin, Pankow",
-  website: "www.caritas-klinik-pankow.de"
+  website: "www.caritas-klinik-pankow.de/unsere-abteilungen/geburtshilfe/"
 )
 
 Hospital.create!(
@@ -182,35 +163,35 @@ Hospital.create!(
 Hospital.create!(
   name: "Vivantes Humboldt-Klinikum",
   address: "Am Nordgraben 2, 13509 Berlin, Reinickendorf",
-  website: "www.vivantes.de"
+  website: "www.vivantes.de/humboldt-klinikum/geburtsmedizin"
 )
 
 Hospital.create!(
   name: "Ev. Waldkrankenhaus Spandau",
   address: "Stadtrandstr. 555 - 561, 13589 Berlin, Spandau",
-  website: "www.waldkrankenhaus.com"
+  website: "www.johannesstift-diakonie.de/medizinische-versorgung/evangelisches-waldkrankenhaus-spandau/behandlung/geburtshilfe-neonatologie/anmeldung-zur-geburt/"
 )
 
 Hospital.create!(
   name: "DRK-Kliniken Westend",
   address: "Spandauer Damm 130, 14050 Berlin, Charlottenburg",
-  website: "www.drk-kliniken-berlin.de"
+  website: "www.drk-kliniken-berlin.de/geburtshilfe-perinatalmedizin-westend"
 )
 
 Hospital.create!(
   name: "Gemeinschaftskrankenhaus Havelhöhe",
   address: "Kladower Damm 221, 14089 Berlin, Spandau",
-  website: "www.havelhoehe.de"
+  website: "www.havelhoehe.de/anmeldung-geburtshilfe.html"
 )
 
 Hospital.create!(
   name: "Krankenhaus Waldfriede",
   address: "Argentinische Allee 40, 14163 Berlin, Zehlendorf",
-  website: "www.waldfriede.de"
+  website: "www.krankenhaus-waldfriede.de/en/medicine-and-care/expecting-parents/office-and-registration"
 )
 
 Hospital.create!(
   name: "Martin-Luther-Krankenhaus",
   address: "Caspar-Theyß-Str. 27 - 31, 14193 Berlin, Grunewald",
-  website: "www.mlk-berlin.de"
+  website: "www.pgdiakonie.de/martin-luther-krankenhaus/kliniken-einrichtungen/geburtshilfe/"
 )

@@ -3,7 +3,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @category = Category.find(@task.category.id)
     profile = current_user.profile
-    if @task.name == "Find a hospital" && profile.geocoded?
+    if @task.name == "Find a hospital and book an appointment" && profile.geocoded?
       @user_marker =
         {
           lat: profile.latitude,

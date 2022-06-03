@@ -27,10 +27,14 @@ export default class extends Controller {
       customMarker.className = "marker"
       customMarker.style.backgroundImage = `url('${marker.image_url}')`
       customMarker.style.backgroundSize = "contain"
-      customMarker.style.width = "25px"
-      customMarker.style.height = "25px"
+      customMarker.style.width = "40px"
+      customMarker.style.height = "40px"
       customMarker.addEventListener('click', () => {
-        alert('WOHOOOO')
+        let content = document.querySelector(".mapboxgl-popup-content")
+        console.log("content:", content)
+        let contentContainer = document.querySelector("#hospital-content")
+        console.log("contentContainer:", contentContainer)
+        contentContainer.appendChild(content)
       })
 
       new mapboxgl.Marker(customMarker)
@@ -42,6 +46,6 @@ export default class extends Controller {
   #fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([ marker.lng, marker.lat ]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
+    this.map.fitBounds(bounds, { padding: 40, maxZoom: 15, duration: 0 })
   }
 }

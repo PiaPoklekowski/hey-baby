@@ -11,26 +11,18 @@ class PregnanciesController < ApplicationController
     @pregnancy = Pregnancy.new(pregnancy_params)
     @pregnancy.mother = current_user
     authorize @pregnancy
+
     if @pregnancy.save
       hospital_category = Category.find_by(name: "Hospital")
       child_benefit_category = Category.find_by(name: "Child benefit")
       birth_certificate_category = Category.find_by(name: "Birth certificate")
 
       Task.create!(
-        name: "Find a hospital",
+        name: "Find a hospital and book an appointment",
         description: "If you wish to give birth at a birthing centre or elsewhere with a midwife in attendance, early application is needed.
-        You can register later at a hospital. This registration is not binding.",
+        Book an appointment for the registration at the hospital of your choice. You can register later at a hospital. This registration is not binding.",
         start_time: 20,
-        deadline: 22,
-        category: hospital_category,
-        pregnancy: @pregnancy
-      )
-
-      Task.create!(
-        name: "Book an appointment",
-        description: "Book an appointment for the registration at the hospital of your choice",
-        start_time: 22,
-        deadline: 25,
+        deadline: 30,
         category: hospital_category,
         pregnancy: @pregnancy
       )
