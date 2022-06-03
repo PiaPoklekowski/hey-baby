@@ -1,6 +1,12 @@
 .complete-form {
-  form {
-    display: flex;
-    justify-content: space-between;
+  padding: 24px 20px;
+  box-shadow: $box-shadow;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
+  background-color: $light-orange;
+  fieldset {
+    margin-bottom: 0 !important;
   }
 }
