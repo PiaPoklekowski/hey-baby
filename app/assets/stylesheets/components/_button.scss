@@ -5,6 +5,7 @@
   color: white;
   text-align: center;
   font-family: $body-font;
+  border: none;
 }
 
 .button-secondary {
@@ -15,10 +16,25 @@
   text-align: center;
   font-family: $body-font;
   background-color: none;
+  text-decoration: none;
+}
+
+.button-secondary p:visited{
+  color: $bright-orange;
 }
 
 a {
   text-decoration: none;
   color: $dark-blue;
   font-family: $body-font;
+}
+
+.button-secondary-blue {
+  border: 1px solid $dark-blue;
+  padding: 10px 16px;
+  border-radius: 30px;
+  color: $dark-blue;
+  text-align: center;
+  font-family: $body-font;
+  background: none;
 }

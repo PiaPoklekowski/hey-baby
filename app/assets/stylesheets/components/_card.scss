@@ -147,3 +147,27 @@
     content: " \f105";
   }
 }
+
+
+.hospital-details{
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  height: 287px;
+  transition: transform 0.3s ease;
+  padding: 12px 30px 20px 50px;
+  width: 100%;
+
+  &.hide{
+    transform: translate(0px, 250px);
+  }
+
+  .button-secondary{
+    display: block;
+  }
+
+  .hospital-circle{
+  color: $bright-orange;
+  }
+}

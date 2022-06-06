@@ -15,8 +15,9 @@ class TasksController < ApplicationController
         {
           lat: hospital.latitude,
           lng: hospital.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { hospital: hospital }),
-          image_url: helpers.asset_url("Pin_Hospital.png")
+          # info_window: render_to_string(partial: "info_window", locals: { hospital: hospital }),
+          image_url: helpers.asset_url("Pin_Hospital.png"),
+          hospital_id: hospital.id
         }
       end
       @all_markers = @markers.push(@user_marker)
@@ -32,10 +33,11 @@ class TasksController < ApplicationController
   def update
     @task = Task.find(params[:id])
     @task.completed = true
-    if @task.save
-      redirect_to categories_path
-    else
-      render :show
-    end
+    @task.save
+    # if @task.save
+    #   redirect_to categories_path
+    # else
+    #   render :show
+    # end
   end
 end
