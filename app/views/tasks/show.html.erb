@@ -7,6 +7,7 @@
   <div id="hospital-content" class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
     <p class="task-description"><%= @task.description %></p>
   </div>
   <% Hospital.all.geocoded.each do |hospital| %>
@@ -23,6 +24,7 @@
   <div class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
     <p><%= @task.description %></p>
   </div>
 <% end %>
@@ -33,6 +35,7 @@
   <div class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
     <p><%= @task.description %></p>
   </div>
 <% end %>
@@ -41,6 +44,7 @@
   <div class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
     <p><%= @task.description %></p>
   </div>
 <% end %>
@@ -51,6 +55,7 @@
   <div class="container">
     <h1><%= @task.name %></h1>
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
     <p><%= @task.description %></p>
   </div>
 <% end %>

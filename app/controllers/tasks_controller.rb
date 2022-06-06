@@ -26,6 +26,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = policy_scope(Task)
+    @tasks = Task.order(:start_time).and(Task.where(pregnancy: current_user.current_pregnancy))
   end
 
   def update

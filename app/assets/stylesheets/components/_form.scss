@@ -7,3 +7,34 @@
   padding: 0.875rem 2.25rem 0.875rem 0.75rem;
   opacity: 0.4;
 }
+
+.checkbox {
+  color: $bright-orange;
+  background-color: white;
+}
+
+label {
+  font-family: $body-font;
+}
+
+.form-check-input {
+  background-color: $light-blue;
+  border: 1px solid $dark-blue;
+  width: 25px;
+  height: 25px;
+}
+
+.form-check-input[type="checkbox"] {
+  border-radius: 50%;
+}
+
+.form-check-input:checked {
+  background-color: $dark-blue;
+  border: 1px solid $dark-blue;
+}
+
+label.form-check-label.boolean.optional {
+  padding: 4px 0;
+  color: black;
+  margin-left: 10px;
+}
