@@ -1,31 +1,23 @@
-.button{
-
-}
-
-.btn-to-form{
-}
-
-.completed-button {
+.button-main {
+  background-color: $bright-orange;
+  padding: 10px 16px;
+  border-radius: 30px;
   color: white;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
-  background-color: $bright-orange;
+  font-family: $body-font;
+}
+
+.button-secondary {
+  border: 1px solid $bright-orange;
+  padding: 10px 16px;
   border-radius: 30px;
-  p {
-    color: orange;
-  }
+  color: $bright-orange;
+  text-align: center;
+  font-family: $body-font;
+  background-color: none;
 }
 
-.checkbox {
-  color: orangered;
-  background-color: white;
-}
-
-input#task_completed {
-  background-color: blue;
-  border-radius: 50%;
-}
-
-label.form-check-label.boolean.optional {
-  color: black;
+a {
+  text-decoration: none;
+  color: $dark-blue;
 }

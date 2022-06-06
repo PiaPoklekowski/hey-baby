@@ -1,6 +1,7 @@
 .onboarding {
   height: 100vh;
   background-size: cover;
+  padding: 40px 20px 20px;
 }
 
 .onboarding-text {
@@ -14,8 +15,10 @@
 .signup-button {
   background-color: $bright-orange;
   color: white;
-  border-radius: 18px;
+  border-radius: 25px;
   width: 100%;
+  text-align: center;
+  padding: 10px;
 }
 
 .contact-primary-button {
@@ -58,4 +61,10 @@
   align-self: end;
   width: 100%;
   margin-top: auto;
+}
+
+.signup {
+  h1 {
+    color: $black;
+  }
 }
