@@ -1,6 +1,6 @@
 <%= render "shared/navbar" %>
 <div class="container">
-  <h1>All tasks</h1>
+  <h1 class="timeline">All tasks</h1>
     <div class="tasks-container">
       <%= render "week_tasks", locals: { task: @tasks, week: @weeks } %>
     </div>
