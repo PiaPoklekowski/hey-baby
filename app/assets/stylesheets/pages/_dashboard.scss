@@ -68,6 +68,8 @@
   display: inline-block;
   h4 {
     font-size: 14px;
+    margin-bottom: 16px;
+    padding-right: 0;
   }
   p {
     font-family: $headers-font;
@@ -79,12 +81,14 @@
 .week {
   p {
     font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .due-date {
   p:first-of-type {
     font-size: 40px;
+    line-height: 40px;
   }
   p:last-of-type {
     font-family: $body-font;
