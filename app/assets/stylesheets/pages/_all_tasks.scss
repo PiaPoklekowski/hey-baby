@@ -1,0 +1,19 @@
+.tasks-container {
+  position: relative
+}
+
+.tasks-by-week {
+  padding-bottom: 10px;
+}
+
+.layout-line {
+  display: flex;
+  position: relative;
+  .line {
+    width: 2px;
+    background-color: $dark-blue;
+    position: relative;
+    top: 102px;
+    left: 1px;
+  }
+}

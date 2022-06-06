@@ -78,6 +78,7 @@
 }
 
 .card-task {
+  margin-left: 14px;
   .title {
     h4 {
       margin-bottom: 6px;
@@ -88,6 +89,13 @@
       color: $mid-gray;
     }
   }
+}
+
+.card-task::before {
+  content: "•";
+  font-size: 35px;
+  position: absolute;
+  left: -23px;
 }
 
 .card-file {
