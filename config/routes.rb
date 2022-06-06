@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   patch 'profiles', to: 'profiles#update'
   get 'profiles', to: 'profiles#show', as: :profile
   get 'tasks', to: 'tasks#index', as: :tasks
-  resources :pregnancies, only: [:new, :create]
+  resources :pregnancies, only: [:new, :create, :edit, :update]
   resources :important_contacts, only: [:new, :create]
   resources :categories, only: [:index, :show] do
     resources :tasks, only: [:show, :update]

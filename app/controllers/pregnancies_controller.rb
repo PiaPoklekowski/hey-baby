@@ -79,6 +79,18 @@ class PregnanciesController < ApplicationController
     end
   end
 
+  # def edit
+  #   @pregnancy = Pregnancy.find_by(mother: current_user)
+  #   authorize @pregnancy
+  # end
+
+  # def update
+  #   @pregnancy = Pregnancy.find_by(mother: current_user)
+  #   authorize @pregnancy
+  #   @pregnancy.update(pregnancy_params)
+  #   redirect_to profile_path
+  # end
+
   private
 
   def pregnancy_params
