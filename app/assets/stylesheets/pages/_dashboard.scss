@@ -23,13 +23,13 @@
     border-radius: 30px;
     padding: 0 16px;
   }
-  ul.current-weeks {
-    background-color: $bright-orange;
-    color: $orange;;
-  }
   ul.trimester {
     background-color: $light-blue;
     color: $mid-gray;
+  }
+  ul.current-weeks {
+    background-color: $bright-orange;
+    color: $orange;;
   }
   li {
     padding: 10px 8px;
