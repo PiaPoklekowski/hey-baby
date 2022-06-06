@@ -1,24 +1,76 @@
 <%= render "shared/navbar" %>
 <div class="container">
   <h1>All tasks</h1>
-  <% @tasks.each do |task| %>
-    <%= link_to "/categories/#{task.category_id}/tasks/#{task.id}" do %>
-      <div class="card card-task">
-        <div class="title">
-          <h4><%= task.name %></h4>
-          <p><%= task.start_time %> - <%= task.deadline %> weeks</p>
-        </div>
-        <div class="details">
-          <% if task.completed == true %>
-            <div class="completed">
-              <i class="fa-solid fa-check"></i>
-              <p>DONE</p>
-            </div>
-          <% end %>
-            <i class="fa-solid fa-angle-right"></i>
-        </div>
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time < 5 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 1 - 4</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
       </div>
-      <% end %>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 4 && task.start_time < 9 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 5 - 8</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 8 && task.start_time < 14 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 9 - 13</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 13 && task.start_time < 18 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 14 - 17</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time < 23 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 18 - 22</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 22 && task.start_time < 28 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 23 - 27</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 27 && task.start_time < 32 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 28 - 31</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 31 && task.start_time < 36 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 32 - 35</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    <% end %>
+
+    <% @tasks_filtered = @tasks.filter { |task| task.start_time > 36 } %>
+    <% if @tasks_filtered.length > 0 %>
+      <div>
+        <h5 class="uppercase task-timer">Week 36 - 40</h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
     <% end %>
 </div>
 <%= render "shared/navbar_bottom" %>
