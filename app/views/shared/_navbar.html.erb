@@ -5,7 +5,7 @@
       <%= link_to "#{params[:controller]}", "/#{params[:controller]}", class: "first" %>
       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
     <% elsif @url.include?("#{params[:controller]}") %>
-      <%= link_to 'Hey Baby', root_path, class: "center"%>
+      <%= link_to 'Hey Baby', root_path, class: "center logo"%>
       <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
     <% end %>
   </div>
