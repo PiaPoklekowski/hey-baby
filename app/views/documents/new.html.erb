@@ -1,0 +1,25 @@
+<div class="onboarding onboarding-text" style="background-image: url('<%= asset_url('profile_onboarding.png') %>');">
+  <div class="logo-text-sign">
+    <p>HEY BABY</p>
+  </div>
+
+  <div class="onboarding-content signup">
+    <div>
+      <h1>New document</h1>
+    </div>
+
+    <div class="pregnancy-form">
+      <%= simple_form_for [@category, @document] do |f| %>
+
+        <div class="form-inputs black-label">
+          <%= f.input :name, label: false, placeholder: "Name" %>
+          <%= f.input :photos, label: false, as: :file, input_html: { multiple: true } %>
+        </div>
+      </div>
+
+      <div class="button-bottom">
+          <%= f.button :submit, "Upload", class: 'signup-button'  %>
+      <% end %>
+      </div>
+  </div>
+</div>
