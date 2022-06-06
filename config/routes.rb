@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :important_contacts, only: [:new, :create]
   resources :categories, only: [:index, :show] do
     resources :tasks, only: [:show, :update]
+    resources :documents, only: [:new, :create]
+
   end
 
   resources :documents, only: [:index]

@@ -1,0 +1,6 @@
+<h1> document</h1>
+<%= simple_form_for [@category, @document] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <%= f.submit "add document", class:"btn btn-primary"%>
+<% end %>
