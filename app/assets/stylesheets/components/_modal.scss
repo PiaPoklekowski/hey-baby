@@ -1,0 +1,30 @@
+.modal-content {
+  background: $light-orange;
+  text-align: center;
+  border-radius: 1.2rem;
+  padding: 10px;
+}
+
+.modal-header {
+  border-bottom: none;
+  display: block;
+}
+
+.title-modal {
+  text-transform: none;
+  font-size: 42px;
+}
+
+.modal-footer {
+  border-top: none;
+  display: block;
+}
+
+.modal-dialog {
+  margin: 2.5rem;
+}
+
+.show {
+  display: flex !important;
+  align-items: center;
+}

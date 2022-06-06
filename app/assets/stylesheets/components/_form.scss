@@ -29,7 +29,7 @@ label {
 }
 
 .form-check-input:checked {
-  background-color: $dark-blue;
+  background-color: $dark-blue !important;
   border: 1px solid $dark-blue;
 }
 
