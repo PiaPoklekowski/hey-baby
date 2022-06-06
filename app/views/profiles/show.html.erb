@@ -1,14 +1,23 @@
 <%= render "shared/navbar" %>
-<div class="container">
-  <div>
-    <%# <h5 style="text-align:center;" class="mb-4">HEY BABY</h5> %>
-
-    <h1 style="text-align:center;" class="mb-4">My Profile</h1>
-
+<div class="onboarding signup" style="background-image: url('<%= asset_url('profile_onboarding.png') %>');">
+  <div class="container">
     <div>
-      <p>Name: <%= @profile.first_name %> <%= @profile.last_name %></p>
-      <p>Address: <%= @profile.address %></p>
-      <p>Birthdate: <%= @profile.birthdate.strftime("%d. %m. %Y") %></p>
+      <%# <h5 style="text-align:center;" class="mb-4">HEY BABY</h5> %>
+
+      <h1 style="text-align:center;" class="mb-4">My Profile</h1>
+
+      <div>
+        <h5>Name:</h5>
+          <p><%= @profile.first_name %> <%= @profile.last_name %></p>
+        <h5>Address:</h5>
+          <p><%= @profile.address %></p>
+        <h5>Birthdate:</h5>
+          <p><%= @profile.birthdate.strftime("%d. %m. %Y") %></p>
+        <h5>Your due date</h5>
+          <p><%= current_user.pregnancies.last.due_date.strftime("%b %Y") %></p>
+        <h5>Weeks of pregnancy</h5>
+          <p><%= current_user.pregnancies.last.due_date.strftime("%d") %></p>
+      </div>
     </div>
   </div>
 </div>
