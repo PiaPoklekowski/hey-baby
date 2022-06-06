@@ -149,16 +149,15 @@
 }
 
 
-
 .hospital-details{
   text-align: left;
   position: fixed;
   bottom: 0;
   background: white;
-  height: 296px;
+  height: 287px;
   transition: transform 0.3s ease;
-  padding: 20px 30px 20px 30px;
-
+  padding: 12px 30px 20px 50px;
+  width: 100%;
 
   &.hide{
     transform: translate(0px, 250px);
