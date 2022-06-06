@@ -2,7 +2,7 @@
   <%= simple_form_for [@category, @task], html: { class: "d-flex justify-content-between align-items-center"} do |f| %>
     <%= f.input :completed, class: "checkbox" %>
     <%# <%= f.button :submit, class: "completed-button" %>
-    <button type="submit" class="completed-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="submit" class="button-main" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Update task
     </button>
   <% end %>
