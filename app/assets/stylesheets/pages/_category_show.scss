@@ -5,3 +5,18 @@
     margin-bottom: 8px;
   }
 }
+
+.category-tasks {
+  .card::after {
+    width: 2px;
+    content: "";
+    height: 100%;
+    background-color: $dark-blue;
+    position: absolute;
+    left: -14px;
+    top: 64px;
+  }
+  a:last-of-type .card::after {
+    height: 0;
+  }
+}
