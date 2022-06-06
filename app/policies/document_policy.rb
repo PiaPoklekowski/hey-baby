@@ -1,4 +1,5 @@
 class DocumentPolicy < ApplicationPolicy
+  has_many_attached :photos
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     # def resolve

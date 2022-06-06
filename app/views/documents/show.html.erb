@@ -1,11 +1,13 @@
 <%= render "shared/navbar" %>
   <div class="container">
     <h1><%= @category.name %></h1>
-        <% if @category.documents.exists? %>
+    <% #upload file here %>
+    <% #button to upload file %>
+        <% if @category.photos.exists? %>
         <div class="files-container">
-          <% @category.documents.each do |document| %>
+          <% @category.photos.each do |photos| %>
             <div class="file-card">
-              <%# cloudinary %>
+              <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
               <div>
                 <p><%= document.name %></p>
               </div>

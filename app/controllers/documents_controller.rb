@@ -9,4 +9,8 @@ class DocumentsController < ApplicationController
     @documents = Document.where(category: params[:category_id])
     authorize @documents
   end
+
+  def document_params
+    params.require(:document).permit(:name, photos: [])
+  end
 end
