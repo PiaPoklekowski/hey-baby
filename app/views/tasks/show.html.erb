@@ -10,6 +10,9 @@
     <hr>
     <p class="task-description"><%= @task.description %></p>
   </div>
+  <% Hospital.all.geocoded.each do |hospital| %>
+    <%= render "info_window", hospital: hospital %>
+  <% end %>
 <% end %>
 
 
@@ -39,6 +42,7 @@
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <hr>
     <p><%= @task.description %></p>
+    <%= render "drive_button", task: @task %>
   </div>
 <% end %>
 
@@ -50,6 +54,7 @@
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <hr>
     <p><%= @task.description %></p>
+    <%= render "form_button", task: @task %>
   </div>
 <% end %>
 

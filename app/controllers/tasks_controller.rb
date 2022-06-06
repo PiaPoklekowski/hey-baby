@@ -15,8 +15,9 @@ class TasksController < ApplicationController
         {
           lat: hospital.latitude,
           lng: hospital.longitude,
-          info_window: render_to_string(partial: "info_window", locals: { hospital: hospital }),
-          image_url: helpers.asset_url("Pin_Hospital.png")
+          # info_window: render_to_string(partial: "info_window", locals: { hospital: hospital }),
+          image_url: helpers.asset_url("Pin_Hospital.png"),
+          hospital_id: hospital.id
         }
       end
       @all_markers = @markers.push(@user_marker)
