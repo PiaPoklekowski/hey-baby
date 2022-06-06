@@ -16,6 +16,11 @@
   text-align: center;
   font-family: $body-font;
   background-color: none;
+  text-decoration: none;
+}
+
+.button-secondary p:visited{
+  color: $bright-orange;
 }
 
 a {
