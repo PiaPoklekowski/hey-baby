@@ -12,6 +12,3 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
-
-import PopupController from "./popup_controller.js"
-application.register("popup", PopupController)
