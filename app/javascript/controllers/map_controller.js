@@ -20,6 +20,7 @@ export default class extends Controller {
     this.#fitMapToMarkers()
   }
 
+
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       // const popup = new mapboxgl.Popup().setHTML(marker.info_window)
@@ -31,11 +32,11 @@ export default class extends Controller {
       customMarker.style.height = "40px"
       // customMarker.data.hospital_id = marker.hospital_id
       customMarker.addEventListener('click', () => {
-        document.querySelectorAll(".hospital_details").forEach((detail) => {
-          detail.classList.add("d-none")
+        document.querySelectorAll(".hospital-details").forEach((detail) => {
+          detail.classList.add("hide")
         })
         const marker_hospital = document.getElementById(marker.hospital_id)
-        marker_hospital.classList.remove("d-none")
+        marker_hospital.classList.remove("hide")
         // let content = document.querySelector(".mapboxgl-popup-content")
         // console.log("content:", content)
         // let contentContainer = document.querySelector("#hospital-content")

@@ -11,11 +11,7 @@
     <p class="task-description"><%= @task.description %></p>
   </div>
   <% Hospital.all.geocoded.each do |hospital| %>
-    <div id="<%= hospital.id %>" class="d-none hospital_details">
-    <%= hospital.name  %>
-    <%= hospital.address  %>
-    <%= hospital.website  %>
-    </div>
+    <%= render "info_window", hospital: hospital %>
   <% end %>
 <% end %>
 
