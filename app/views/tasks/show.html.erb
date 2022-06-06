@@ -9,6 +9,13 @@
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <p class="task-description"><%= @task.description %></p>
   </div>
+  <% Hospital.all.geocoded.each do |hospital| %>
+    <div id="<%= hospital.id %>" class="d-none hospital_details">
+    <%= hospital.name  %>
+    <%= hospital.address  %>
+    <%= hospital.website  %>
+    </div>
+  <% end %>
 <% end %>
 
 

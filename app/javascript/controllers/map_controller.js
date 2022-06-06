@@ -22,25 +22,31 @@ export default class extends Controller {
 
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.info_window)
+      // const popup = new mapboxgl.Popup().setHTML(marker.info_window)
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
       customMarker.style.backgroundImage = `url('${marker.image_url}')`
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "40px"
       customMarker.style.height = "40px"
+      // customMarker.data.hospital_id = marker.hospital_id
       customMarker.addEventListener('click', () => {
-        let content = document.querySelector(".mapboxgl-popup-content")
-        console.log("content:", content)
-        let contentContainer = document.querySelector("#hospital-content")
-        console.log("contentContainer:", contentContainer)
-        contentContainer.appendChild(content)
+        document.querySelectorAll(".hospital_details").forEach((detail) => {
+          detail.classList.add("d-none")
+        })
+        const marker_hospital = document.getElementById(marker.hospital_id)
+        marker_hospital.classList.remove("d-none")
+        // let content = document.querySelector(".mapboxgl-popup-content")
+        // console.log("content:", content)
+        // let contentContainer = document.querySelector("#hospital-content")
+        // console.log("contentContainer:", contentContainer)
+        // contentContainer.appendChild(content)
       })
 
       new mapboxgl.Marker(customMarker)
         .setLngLat([ marker.lng, marker.lat ])
-        .setPopup(popup)
         .addTo(this.map)
+        // .setPopup(popup)
     })
   }
   #fitMapToMarkers() {
