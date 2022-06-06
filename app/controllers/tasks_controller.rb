@@ -27,6 +27,7 @@ class TasksController < ApplicationController
   def index
     @tasks = policy_scope(Task)
     @tasks = Task.order(:start_time).and(Task.where(pregnancy: current_user.current_pregnancy))
+    @weeks = [[1, 4], [5, 8], [9, 13], [14, 17], [18, 22], [23, 27], [28, 31], [32, 35], [36, 40]]
   end
 
   def update

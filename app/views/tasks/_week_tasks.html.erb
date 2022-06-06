@@ -1,0 +1,18 @@
+<% @weeks.each do |week| %>
+  <% @tasks_filtered = @tasks.filter { |task| task.start_time >= week[0] && task.start_time <= week[1] } %>
+  <% if @tasks_filtered.length > 0 %>
+    <div class="layout-line">
+      <div class="line"></div>
+      <div class="tasks-by-week">
+        <h5 class="uppercase task-timer"><%= week[0] %> - <%= week[1] %></h5>
+        <%= render "card_task", locals: { task: @tasks_filtered } %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<% if @tasks_filtered = @tasks.filter { |task| task.start_time > @weeks[-1][1] } %>
+  <div>
+    <h5 class="uppercase task-timer">After birth</h5>
+    <%= render "card_task", locals: { task: @tasks_filtered } %>
+  </div>
+<% end %>
