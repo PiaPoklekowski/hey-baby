@@ -1,6 +1,26 @@
 <div class="complete-form">
   <%= simple_form_for [@category, @task], html: { class: "d-flex justify-content-between align-items-center"} do |f| %>
     <%= f.input :completed, class: "checkbox" %>
-    <%= f.button :submit, class: "button-main" %>
+    <%# <%= f.button :submit, class: "completed-button" %>
+    <button type="submit" class="button-main" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Update task
+    </button>
   <% end %>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="title-modal" id="exampleModalLabel">Task done!</h5>
+      </div>
+      <div class="modal-body">
+        <p>Congrats, you're 7 months away from being a <strong>super mom!</strong></p>
+      </div>
+      <div class="modal-footer">
+        <%= link_to "Back to my tasks", categories_path, class: "button-secondary-blue" %>
+      </div>
+    </div>
+  </div>
 </div>

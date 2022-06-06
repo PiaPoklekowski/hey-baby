@@ -29,7 +29,7 @@ label {
 }
 
 .form-check-input:checked {
-  background-color: $dark-blue;
+  background-color: $dark-blue !important;
   border: 1px solid $dark-blue;
 }
 
@@ -37,4 +37,8 @@ label.form-check-label.boolean.optional {
   padding: 4px 0;
   color: black;
   margin-left: 10px;
+}
+
+.black-label {
+  color: black;
 }
