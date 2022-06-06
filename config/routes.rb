@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   end
 
-  resources :documents, only: [:index]
-  get 'categories/:category_id/documents', to: 'documents#show', as: :document
+  resources :documents, only: [:index, :destroy]
+  get 'categories/:category_id/documents', to: 'documents#show', as: :document_show
 
   # Defines the root path route ("/")
   # root "articles#index"

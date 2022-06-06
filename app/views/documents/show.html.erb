@@ -1,17 +1,26 @@
 <%= render "shared/navbar" %>
   <div class="container">
     <h1><%= @category.name %></h1>
-    <%= link_to "add document", new_category_document_path(@category) %>
+    <div style="text-align:center;">
+      <%= link_to "+ Add document", new_category_document_path(@category), class: "button-secondary" %>
+    </div>
+    <hr>
     <% #button to upload file %>
         <% if !@category.documents.empty? %>
-        <p>Your Documents</p>
-        <div class="files-container">
+        <div class="documents-container">
           <% @category.documents.each do |document| %>
             <% document.photos.each do |photo| %>
-              <div class="file-card">
+              <div class="card-file">
+              <%= link_to photo.url, target: "_blank" do %>
                 <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-                <div>
-                  <p><%= document.name %></p>
+              <% end %>
+                <div class="d-flex justify-content-between mx-2">
+                  <div>
+                    <p><%= document.name %></p>
+                  </div>
+                  <div class="delete-document">
+                    <%= link_to "X", document_path(document), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                  </div>
                 </div>
               </div>
             <% end %>
@@ -20,5 +29,6 @@
         <% else %>
           <p>You haven't uploaded any documents yet</p>
         <% end %>
+        </div>
   </div>
 <%= render "shared/navbar_bottom" %>
