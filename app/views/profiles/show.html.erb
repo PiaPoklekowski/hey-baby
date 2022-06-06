@@ -14,9 +14,36 @@
         <h5>Birthdate:</h5>
           <p><%= @profile.birthdate.strftime("%d. %m. %Y") %></p>
         <h5>Your due date</h5>
-          <p><%= current_user.pregnancies.last.due_date.strftime("%b %Y") %></p>
+          <p><%= current_user.pregnancies.last.due_date.strftime("%d. %m. %Y") %></p>
         <h5>Weeks of pregnancy</h5>
-          <p><%= current_user.pregnancies.last.due_date.strftime("%d") %></p>
+          <p><%= current_user.pregnancies.last.week_of_pregnancy %></p>
+      </div>
+
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        edit due date
+      </button>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="pregnancy-form">
+          <%= simple_form_for [current_user.pregnancies.last] do |f| %>
+            <%= f.input :due_date, as: :date, html5: true %>
+        </div>
+        <div class="button-bottom">
+            <%= f.button :submit, "Update", class: 'signup-button' %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -23,7 +23,7 @@ class PregnancyPolicy < ApplicationPolicy
   #   true
   # end
 
-  # def update?
-  #   true
-  # end
+  def update?
+    true
+  end
 end
