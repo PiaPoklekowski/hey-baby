@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   resources :important_contacts, only: [:new, :create]
   resources :categories, only: [:index, :show] do
     resources :tasks, only: [:show, :update]
+    resources :documents, only: [:new, :create]
+
   end
 
-  resources :documents, only: [:index]
-  get 'categories/:category_id/documents', to: 'documents#show', as: :document
+  resources :documents, only: [:index, :destroy]
+  get 'categories/:category_id/documents', to: 'documents#show', as: :document_show
 
   # Defines the root path route ("/")
   # root "articles#index"
