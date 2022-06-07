@@ -2,7 +2,7 @@
   <div class="container">
     <h1><%= @category.name %></h1>
     <div style="text-align:center;">
-      <%= link_to "+ Add document", new_category_document_path(@category), class: "button-secondary" %>
+      <%= link_to "+ Add document", new_category_document_path(@category), class: "button-secondary", data: { turbo: false } %>
     </div>
     <hr>
     <% #button to upload file %>
