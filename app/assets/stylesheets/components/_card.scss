@@ -123,18 +123,22 @@
 
 .card-dashboard {
   flex-direction: column;
-  height: 140px;
+  height: 150px;
   align-items: flex-start;
   border-radius: 20px;
   h4 {
     font-size: 14px;
   }
-  p {
+  .category {
     font-family: $headers-font;
     color: $bright-orange;
     font-weight: 700;
     font-size: 13px;
     line-height: 17px;
+  }
+  .deadline {
+    color: $mid-gray;
+    font-size: $font-size-12;
   }
 }
 

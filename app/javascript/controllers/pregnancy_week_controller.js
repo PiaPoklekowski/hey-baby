@@ -7,7 +7,7 @@ export default class extends Controller {
   connect() {
     console.log(this.trimesterTargets)
     let pregnancyWeek = this.pregnancyTarget.innerText;
-    console.log(pregnancyWeek); // 26
+
     let trimester;
     if (pregnancyWeek < 4) {
       trimester = this.trimesterTargets[0]
@@ -16,10 +16,9 @@ export default class extends Controller {
     } else {
       trimester = this.trimesterTargets[2]
     };
-    console.log(trimester); // 2
+
     trimester.classList.toggle("current-weeks");
 
-    console.log(trimester.children[2].innerText)
     let week1 = trimester.children[0];
     let week2 = trimester.children[1];
     let week3 = trimester.children[2];
