@@ -1,0 +1,40 @@
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  justify-content:space-between;
+  background-color: #ffebe7;
+  border-radius: $border-radius-10;
+  box-shadow: $box-shadow;
+  margin: 2px;
+  padding: 20px 24px;
+
+  h5 {
+    color: black;
+    margin-top: 10px;
+  }
+  p {
+    color: black;
+    margin-bottom: 10px;
+  }
+
+}
+
+.pregnancy-card {
+  flex-direction: column;
+  justify-content: left space-between;
+  background-color: #ffebe7;
+  border-radius: $border-radius-10;
+  box-shadow: $box-shadow;
+  margin: 2px;
+  padding: 20px 24px;
+
+  h4 {
+    color: black;
+  }
+  p {
+    color: black;
+    margin-bottom: 2px;
+  }
+
+}

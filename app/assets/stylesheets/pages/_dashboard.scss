@@ -25,11 +25,13 @@
   }
   ul.trimester {
     background-color: $light-blue;
-    color: $blue-gray;
+    color: $dark-blue;
+    opacity: .6;
   }
   ul.current-weeks {
     background-color: $bright-orange;
-    color: $orange;;
+    color: $orange;
+    opacity: 1;
   }
   li {
     padding: 10px 8px;

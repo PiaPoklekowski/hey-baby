@@ -3,9 +3,12 @@
     <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('fetus2.png') %>');">
   <% elsif current_user.pregnancies.last.week_of_pregnancy < 28 && current_user.pregnancies.last.week_of_pregnancy > 13 %>
     <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babyready.png') %>');">
+  <% else current_user.pregnancies.last.week_of_pregnancy < 27 %>
+    <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babyready.png') %>');">
   <% end %>
     <%= render "shared/navbar" %>
   </div>
+
   <div class="content">
     <div class="pregnancy-progress">
       <h5>Weeks</h5>
@@ -29,6 +32,7 @@
         </div>
       </div>
     </div>
+
     <div class="container-dashboard">
       <h1 class="padding">Overview</h1>
       <div>
@@ -58,6 +62,7 @@
             <% end %>
           </div>
       </div>
+
       <div class="padding">
         <hr>
         <div>
@@ -78,23 +83,31 @@
           </div>
           <% end %>
         </div>
-        <hr>
-        <div>
-          <div class="cards-header">
-            <h5>Important Contacts</h5>
-            <%= link_to 'All Contacts', '#' %>
-          </div>
-          <% @important_contacts.each do |contact| %>
-            <%= link_to '#' do %>
-              <div class="card">
-                <h4><%= contact.name %></h4>
-                <p>+<%= contact.phone_number %></p>
-              </div>
-            <% end %>
-          <% end %>
+    </div>
+
+    <div class="padding">
+      <hr>
+      <div>
+        <div class="cards-header">
+          <h5>Important Contacts</h5>
+          <%= link_to 'All Contacts', '#' %>
         </div>
+          <% if @important_contacts.exists? %>
+            <% @important_contacts.each do |contact| %>
+              <%= link_to '#' do %>
+                <div class="card">
+                  <h4><%= contact.name %></h4>
+                  <p>+<%= contact.phone_number %></p>
+                </div>
+              <% end %>
+            <% end %>
+            <%= link_to "+ Add a new contact", new_important_contact_path, class: "button-secondary mt-3", data: { turbo: false } %>
+          <% else %>
+            <%= link_to "+ Add a new contact", new_important_contact_path, class: "button-secondary mt-3", data: { turbo: false } %>
+          <% end %>
       </div>
     </div>
+
     <%= render "shared/navbar_bottom" %>
   </div>
 </div>
