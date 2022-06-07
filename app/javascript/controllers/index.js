@@ -7,11 +7,14 @@ import { application } from "./application"
 import AddressAutocompleteController from "./address_autocomplete_controller.js"
 application.register("address-autocomplete", AddressAutocompleteController)
 
+import DetailsController from "./details_controller.js"
+application.register("details", DetailsController)
+
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
 
 import MapController from "./map_controller.js"
 application.register("map", MapController)
 
-import DetailsController from "./details_controller.js"
-application.register("details", DetailsController)
+import PregnancyWeekController from "./pregnancy_week_controller.js"
+application.register("pregnancy-week", PregnancyWeekController)
