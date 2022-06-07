@@ -10,12 +10,12 @@
         <li>5-8</li>
         <li>9-13</li>
       </ul>
-      <ul data-pregnancy-week-target="trimester" class="trimester">
+      <ul data-pregnancy-week-target="trimester" class="trimester trimester2">
         <li>14-17</li>
-        <li>18-33</li>
+        <li>18-22</li>
         <li>23-27</li>
       </ul>
-      <ul data-pregnancy-week-target="trimester" class="trimester">
+      <ul data-pregnancy-week-target="trimester" class="trimester trimester3">
         <li>28-31</li>
         <li>32-35</li>
         <li>36-40</li>
@@ -30,7 +30,7 @@
         <%= link_to 'All Tasks', tasks_path %>
       </div>
       <% if @tasks.count > 2 %>
-        <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 150px)">
+        <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 160px)">
       <% elsif @tasks.count == 2 %>
         <div class="scroll-container" style="grid-template-columns: repeat(<%= @tasks.count %>, 1fr)">
       <% else %>

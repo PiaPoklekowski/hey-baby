@@ -33,7 +33,7 @@
   <p class="padding"><strong>MY FILES</strong></p>
   <% if @category.documents.exists? %>
     <% if @category.documents.count > 2 %>
-      <div class="scroll-container" style="grid-template-columns: repeat(<%= @category.documents.count %>, 150px)">
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @category.documents.count %>, 160px)">
     <% elsif @category.documents.count == 2 %>
       <div class="scroll-container" style="grid-template-columns: repeat(<%= @category.documents.count %>, 1fr)">
     <% else %>
