@@ -19,3 +19,16 @@
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
+
+.padding {
+  padding: 0 24px;
+}
+
+.scroll-container-first {
+  margin: 0 auto;
+  padding: 40px 24px 0;
+}
+
+.scroll-container-last {
+  padding-bottom: 80px;
+}
