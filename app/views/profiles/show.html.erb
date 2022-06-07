@@ -7,21 +7,28 @@
       <h1 style="text-align:center;" class="mb-4">My Profile</h1>
 
       <div>
-        <h5>Name:</h5>
+        <h5>Full name:</h5>
           <p><%= @profile.first_name %> <%= @profile.last_name %></p>
         <h5>Address:</h5>
           <p><%= @profile.address %></p>
         <h5>Birthdate:</h5>
           <p><%= @profile.birthdate.strftime("%d. %m. %Y") %></p>
-        <h5>Your due date</h5>
-          <p><%= current_user.pregnancies.last.due_date.strftime("%d. %m. %Y") %></p>
-        <h5>Weeks of pregnancy</h5>
-          <p><%= current_user.pregnancies.last.week_of_pregnancy %></p>
+        <hr>
+        <div class="d-flex justify-content-between">
+          <div>
+          <h5>Your due date</h5>
+            <p><%= current_user.pregnancies.last.due_date.strftime("%d. %m. %Y") %></p>
+            <p class="profile-due-date"><%= "#{current_user.pregnancies.last.week_of_pregnancy} weeks pregnant" %></p>
+          </div>
+          <div>
+            <button type="button" class="button-secondary d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Edit
+            </button>
+          </div>
+        </div>
       </div>
 
-      <button type="button" class="button-main d-block" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Edit due date
-      </button>
+
 
     </div>
   </div>
