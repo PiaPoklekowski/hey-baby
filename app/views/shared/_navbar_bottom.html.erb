@@ -1,6 +1,6 @@
 <div class="nav-bottom">
       <ul>
-          <li class="nav-item active">
+          <li class="<%= 'active' if current_page?(root_path) %> nav-item">
             <%= link_to root_path do %>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="17" height="17" rx="3.5" stroke="black"/>
@@ -10,7 +10,7 @@
               <p>Dashboard</p>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li class="<%= 'active' if current_page?(categories_path) || params[:id].present? %> nav-item">
             <%= link_to categories_path do %>
               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="9.75" cy="9" r="8.5" stroke="black"/>
@@ -19,7 +19,7 @@
               <p>Categories</p>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li class="<%= 'active' if current_page?(tasks_path) %> nav-item">
             <%= link_to tasks_path do %>
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.5" y="0.5" width="17" height="17" rx="3.5" stroke="black"/>
@@ -34,7 +34,7 @@
               <p>Timeline</p>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li class="<%= 'active' if current_page?(documents_path) || params[:category_id].present?  %> nav-item">
             <%= link_to documents_path do %>
               <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.375 16V5.1875C1.375 4.63522 1.82272 4.1875 2.375 4.1875H9.85248C10.1798 4.1875 10.4865 4.02728 10.6734 3.75856L12.0766 1.74144C12.2635 1.47271 12.5702 1.3125 12.8975 1.3125H17.6025C17.9298 1.3125 18.2365 1.47272 18.4234 1.74144L19.9459 3.93005C20.0625 4.09766 20.125 4.29694 20.125 4.50112V16C20.125 16.5523 19.6773 17 19.125 17H2.375C1.82272 17 1.375 16.5523 1.375 16Z" stroke="black"/>
@@ -42,7 +42,7 @@
               <p>My Files</p>
             <% end %>
           </li>
-          <li class="nav-item">
+          <li class="<%= 'active' if current_page?(profiles_path) %> nav-item">
             <%= link_to profiles_path do %>
               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="8" cy="3" r="2.5" stroke="black"/>
