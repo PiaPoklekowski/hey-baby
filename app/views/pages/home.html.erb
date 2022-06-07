@@ -77,14 +77,19 @@
           <h5>Important Contacts</h5>
           <%= link_to 'All Contacts', '#' %>
         </div>
-        <% @important_contacts.each do |contact| %>
-          <%= link_to '#' do %>
-            <div class="card">
-              <h4><%= contact.name %></h4>
-              <p>+<%= contact.phone_number %></p>
-            </div>
+          <% if @important_contacts.exists? %>
+            <% @important_contacts.each do |contact| %>
+              <%= link_to '#' do %>
+                <div class="card">
+                  <h4><%= contact.name %></h4>
+                  <p>+<%= contact.phone_number %></p>
+                </div>
+              <% end %>
+            <% end %>
+            <%= link_to "+ Add a new contact", new_important_contact_path, class: "button-secondary mt-3", data: { turbo: false } %>
+          <% else %>
+            <%= link_to "+ Add a new contact", new_important_contact_path, class: "button-secondary mt-3", data: { turbo: false } %>
           <% end %>
-        <% end %>
       </div>
     </div>
   </div>
