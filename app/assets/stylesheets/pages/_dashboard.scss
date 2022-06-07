@@ -1,5 +1,5 @@
 .fetus-image {
-  height: 50vh;
+  height: 60vh;
   width: 100vw;
   background-size: cover;
   background-position: 50%;
@@ -23,13 +23,13 @@
     border-radius: 30px;
     padding: 0 16px;
   }
-  ul.current-weeks {
-    background-color: $bright-orange;
-    color: $orange;;
-  }
   ul.trimester {
     background-color: $light-blue;
     color: $mid-gray;
+  }
+  ul.current-weeks {
+    background-color: $bright-orange;
+    color: $orange;;
   }
   li {
     padding: 10px 8px;
@@ -50,9 +50,6 @@
     text-align: left;
     font-size: 34px;
     margin-bottom: 10px;
-  }
-  .padding {
-    padding: 0 24px;
   }
 }
 
