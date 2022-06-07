@@ -6,9 +6,9 @@
     </div>
     <hr>
     <% #button to upload file %>
-        <% if !@category.documents.empty? %>
+        <% if !@documents.empty? %>
         <div class="documents-container">
-          <% @category.documents.each do |document| %>
+          <% @documents.each do |document| %>
             <% document.photos.each do |photo| %>
               <div class="card-file">
               <%= link_to photo.url, target: "_blank" do %>
