@@ -32,15 +32,15 @@
 
 <div class="scroll-container-last">
   <p class="padding"><strong>MY FILES</strong></p>
-  <% if @category.documents.exists? %>
-    <% if @category.documents.count > 2 %>
-      <div class="scroll-container" style="grid-template-columns: repeat(<%= @category.documents.count %>, 150px)">
-    <% elsif @category.documents.count == 2 %>
-      <div class="scroll-container" style="grid-template-columns: repeat(<%= @category.documents.count %>, 1fr)">
+  <% if @documents.exists? %>
+    <% if @documents.count > 2 %>
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 150px)">
+    <% elsif @documents.count == 2 %>
+      <div class="scroll-container" style="grid-template-columns: repeat(<%= @documents.count %>, 1fr)">
     <% else %>
       <div class="scroll-container" style="grid-template-columns: 1fr">
     <% end %>
-      <% @category.documents.each do |document| %>
+      <% @documents.each do |document| %>
         <div class="card-file">
           <% document.photos.each do |photo| %>
             <div class="card-file">
