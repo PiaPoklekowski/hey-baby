@@ -12,7 +12,7 @@ class Pregnancy < ApplicationRecord
   validates :due_date, presence: true
 
   def week_of_pregnancy
-    conception_date = self.due_date - 280
-    week_of_pregancy = ((Date.today - conception_date) / 7.0).round()
+    conception_date = due_date - 280
+    ((Date.today - conception_date) / 7.0).round
   end
 end
