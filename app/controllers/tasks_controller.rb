@@ -33,12 +33,10 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task.completed = true
-    @task.save
-    # if @task.save
-    #   redirect_to categories_path
-    # else
-    #   render :show
-    # end
+    @task.update(task_params)
+  end
+
+  def task_params
+    params.require(:task).permit(:completed)
   end
 end
