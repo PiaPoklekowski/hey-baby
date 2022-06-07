@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
 
   def show
     @category = Category.find(params[:category_id])
-    @documents = Document.where(category: params[:category_id])
+    @documents = Document.where(category: params[:category_id]).and(Document.where(pregnancy: current_user.current_pregnancy))
     authorize @documents
   end
 
