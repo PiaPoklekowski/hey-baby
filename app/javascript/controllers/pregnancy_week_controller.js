@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="pregnancy-week"
 export default class extends Controller {
-  static targets = ["pregnancy", "trimester"]
+  static targets = ["pregnancy", "trimester", "position"]
 
   connect() {
     let pregnancyWeek = parseInt(this.pregnancyTarget.innerText);
@@ -14,28 +14,34 @@ export default class extends Controller {
 
   setTrimester(pregnancyWeek) {
     let trimester = 0;
-    if (pregnancyWeek < 4) {
+    let calcPosition = 0;
+
+    if (pregnancyWeek < 14) {
       trimester = this.trimesterTargets[0]
+      calcPosition = (screen.width - trimester.clientWidth) / 2;
+      this.positionTarget.style.marginLeft = `${calcPosition}px`;
     } else if (pregnancyWeek > 13 && pregnancyWeek < 28) {
       trimester = this.trimesterTargets[1]
+      calcPosition = trimester.previousElementSibling.clientWidth - (screen.width - trimester.clientWidth) / 2;
+      this.positionTarget.style.marginLeft = `-${calcPosition+10}px`;
     } else {
       trimester = this.trimesterTargets[2]
+      const trimesterMarginRight = (screen.width - trimester.clientWidth) / 2;
+      calcPosition = this.positionTarget.scrollWidth - trimester.clientWidth - trimesterMarginRight;
+      trimester.style.marginRight = `${trimesterMarginRight}px`;
+      this.positionTarget.style.marginLeft = `-${calcPosition}px`;
     }
     return trimester;
   }
 
   setWeek(pregnancyWeek, trimester) {
-    const weeks1 = trimester.children[0].innerText.split("-");
-    const weeks2 = trimester.children[1].innerText.split("-");
-    const weeks3 = trimester.children[2].innerText.split("-");
-
-    if (this.range(weeks1).includes(pregnancyWeek)) {
-      trimester.children[0].classList.add("active-week")
-    } else if (this.range(weeks2).includes(pregnancyWeek)) {
-      trimester.children[1].classList.add("active-week")
-    } else if (this.range(weeks3).includes(pregnancyWeek)) {
-      trimester.children[2].classList.add("active-week")
-    }
+    let arr = Array.from(trimester.children);
+    arr.forEach(week => {
+      let startEnd = week.innerText.split("-")
+      if (this.range(startEnd).includes(pregnancyWeek)) {
+        week.classList.add("active-week")
+      }
+    });
   }
 
   range(weeks) {
