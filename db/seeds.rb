@@ -83,13 +83,14 @@ Task.create!(
 
 Task.create!(
   name: "Registering the child to the registry office (Standesamt)",
-  description: "Within a week after the birth, register your baby to the registery office in which your baby is born or directly at the hospital. They will issue the birth certificate.
-                Required documents:
-                  -Birth announcement will be send by the hospital
-                  -Declaration of both parents about the first name and surname of the child (signed)
-                  -Valid identity card or passport of parents
-                  - mother's and father's birth certificate
-                  - if applicable, marriage certificate",
+  description: "Within a week after the birth, register your baby to the registery office in which your baby is born or directly at the hospital.
+              They will issue the birth certificate.\n
+               Required documents:\n
+              • Birth announcement will be send by the hospital\n
+               • Declaration of both parents about the first name and surname of the child (signed)
+               \n• Valid identity card or passport of parents
+               \n• mother's and father's birth certificate
+               \n•if applicable, marriage certificate",
   start_time: 40,
   deadline: 41,
   form_url_de: "https://drive.google.com/file/d/1VkinWa9dQFZGq0KeL-FRjqTU7_-uRa_X/view?usp=sharing",
