@@ -22,7 +22,8 @@ class DocumentsController < ApplicationController
     @document.pregnancy = current_user.current_pregnancy
     @document.category = @category
     authorize @document
-    if @document.save
+    # raise
+    if @document.save!
       redirect_to category_documents_path(@category)
     else
       render :new, status: :unprocessable_entity

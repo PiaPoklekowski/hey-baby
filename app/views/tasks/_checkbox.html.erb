@@ -13,13 +13,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="title-modal" id="exampleModalLabel">Task done!</h5>
+        <h5 class="title-modal" id="exampleModalLabel">Task updated!</h5>
       </div>
       <div class="modal-body">
-        <p>Congrats, you're 7 months away from being a <strong>super mom!</strong></p>
+        <p>Your task has successfully been updated<strong>super mom!</strong></p>
       </div>
       <div class="modal-footer">
-        <%= link_to "Back to my tasks", categories_path, class: "button-secondary-blue" %>
+        <%= link_to "Back to my category tasks", category_path(@category), class: "button-secondary-blue" %>
       </div>
     </div>
   </div>
