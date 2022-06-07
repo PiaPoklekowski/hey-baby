@@ -1,5 +1,5 @@
 .fetus-image {
-  height: 60vh;
+  height: 54vh;
   width: 100vw;
   background-size: cover;
   background-position: 50%;
@@ -25,11 +25,13 @@
   }
   ul.trimester {
     background-color: $light-blue;
-    color: $mid-gray;
+    color: $dark-blue;
+    opacity: .6;
   }
   ul.current-weeks {
     background-color: $bright-orange;
-    color: $orange;;
+    color: $orange;
+    opacity: 1;
   }
   li {
     padding: 10px 8px;
@@ -93,3 +95,21 @@
     text-transform: uppercase;
   }
 }
+
+.trimester:nth-child(2) {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+// .trimester-position-1 {
+//   margin-left: 124px;
+// }
+
+// .trimester-position-2 {
+//   margin-left: -70px;
+// }
+
+// .trimester-position-3 {
+//   margin-left: -290px;
+//   padding-right: 120px;;
+// }
