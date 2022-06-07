@@ -32,11 +32,16 @@
         <div class="scroll-container">
           <% @category.documents.each do |document| %>
             <div class="card-file">
-              <%# cloudinary %>
+              <% document.photos.each do |photo| %>
+                <div class="card-file">
+                <%= link_to photo.url, target: "_blank" do %>
+                  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+                <% end %>
               <div>
                 <p><%= document.name %></p>
               </div>
             </div>
+            <% end %>
           <% end %>
         </div>
         <% else %>
