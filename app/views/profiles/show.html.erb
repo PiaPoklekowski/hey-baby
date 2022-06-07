@@ -32,11 +32,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <div class="d-flex justify-content-end" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></div>
         <h5 class="modal-title" id="exampleModalLabel">Edit due date</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="pregnancy-form">
+        <div class="form-control d-non">
           <%= simple_form_for [current_user.pregnancies.last] do |f| %>
             <%= f.input :due_date, as: :date, html5: true %>
         </div>
