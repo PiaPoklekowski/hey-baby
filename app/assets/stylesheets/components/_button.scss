@@ -8,6 +8,10 @@
   border: none;
 }
 
+.button-main:hover{
+  background-color: #ca3e34;
+}
+
 .button-secondary {
   border: 1px solid $bright-orange;
   padding: 10px 16px;
@@ -19,6 +23,10 @@
   text-decoration: none;
   display: block;
 }
+.button-secondary:hover{
+  color: #ca3e34;
+  border: 1px solid #ca3e34;
+}
 
 .button-secondary p:visited{
   color: $bright-orange;
@@ -28,6 +36,9 @@ a {
   text-decoration: none;
   color: $dark-blue;
   font-family: $body-font;
+}
+a:active{
+  opacity: .5;
 }
 
 .button-secondary-blue {
