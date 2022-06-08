@@ -3,7 +3,7 @@
   <h1 class="timeline">All tasks</h1>
     <div data-controller="tasks-list" class="tasks-container">
       <div data-tasks-list-target="line" class="line"></div>
-      <div data-tasks-list-target="cards">
+      <div data-tasks-list-target="cards" class="cards">
         <%= render "week_tasks", locals: { task: @tasks, week: @weeks } %>
       </div>
     </div>

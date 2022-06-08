@@ -8,7 +8,7 @@
   </div>
   <div data-controller="tasks-list" class="category-tasks">
     <div data-tasks-list-target="line" class="line"></div>
-    <div data-tasks-list-target="cards">
+    <div data-tasks-list-target="cards" class="cards">
       <% @tasks.each do |task| %>
         <%= link_to category_task_path(@category, task) do %>
           <div class="card card-task">
