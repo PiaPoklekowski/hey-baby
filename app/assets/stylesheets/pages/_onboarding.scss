@@ -1,12 +1,13 @@
 .onboarding {
   height: 100vh;
+  overflow: scroll;
   background-size: cover;
   padding: 40px 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     margin-top: 20px;
   }
   form {
