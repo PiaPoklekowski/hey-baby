@@ -13,7 +13,7 @@
         <h5 class="title-modal" id="exampleModalLabel">Task done!</h5>
       </div>
       <div class="modal-body">
-        <p>Congrats, you're 7 months away from being a <strong>super mom!</strong></p>
+        <p>Congrats, you're <%= "#{40 - current_user.pregnancies.last.week_of_pregnancy}" %> weeks away from being a <strong>super mom!</strong></p>
       </div>
       <div class="modal-footer">
         <%= link_to "Back to my category tasks", category_path(@category), class: "button-secondary-blue" %>
