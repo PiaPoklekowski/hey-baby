@@ -1,18 +1,26 @@
-.tasks-container {
-  position: relative
+.tasks-container, .category-tasks {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-.layout-line {
-  display: flex;
+.line {
+  background-color: $dark-blue;
   position: relative;
-  .line {
-    width: 2px;
-    background-color: $dark-blue;
-    position: relative;
-    top: 102px;
-    left: 1px;
-  }
+  left: 1px;
 }
+
+// .layout-line {
+//   display: flex;
+//   position: relative;
+//   .line {
+//     width: 2px;
+//     background-color: $dark-blue;
+//     position: relative;
+//     top: 102px;
+//     left: 1px;
+//   }
+// }
 
 h1.timeline {
   margin-bottom: 0;
