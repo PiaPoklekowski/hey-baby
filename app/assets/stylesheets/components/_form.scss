@@ -1,20 +1,106 @@
-.form-control {
-  padding: 0.875rem 0.75rem;
-  opacity: 0.4;
+// Input styles light bg
+
+.form-control, .form-select, .mapboxgl-ctrl-geocoder--input {
+  font-family: $body-font;
+  padding: 0.875rem 0.875rem;
+  background-color: rgba(255,255,255,.2);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 100%;
 }
 
-.form-select {
-  padding: 0.875rem 2.25rem 0.875rem 0.75rem;
-  opacity: 0.4;
+.form-control.profile_address {
+  padding: 0;
+  background: none;
+  border: none
 }
 
-.checkbox {
-  color: $bright-orange;
+.form-select::placeholder, .form-control::placeholder, .mapboxgl-ctrl-geocoder--input::placeholder {
+  color: rgba(0,0,0,.4);
+}
+
+.form-select:focus, .form-control:focus, .mapboxgl-ctrl-geocoder--input:focus {
   background-color: white;
+}
+
+.form-text {
+  color: $dark-blue;
+}
+
+.form-label {
+  margin-bottom: 0.25rem;
+  opacity: .8;
 }
 
 label {
   font-family: $body-font;
+  font-size: $font-size-14;
+}
+
+input {
+  font-family: $body-font;
+  font-size: 16px;
+}
+
+.dark-bg {
+  label {
+    color: white;
+  }
+
+  .form-select::placeholder, .form-control::placeholder, .mapboxgl-ctrl-geocoder--input::placeholder {
+    color: rgba(255,255,255,.7);
+  }
+
+  .form-select:focus, .form-control:focus, .mapboxgl-ctrl-geocoder--input:focus {
+    color: black;
+  }
+
+  .form-select, .form-control {
+    color: white;
+  }
+
+  .form-select:focus::placeholder, .form-control:focus::placeholder {
+    color: rgba(0,0,0,.4);
+  }
+}
+
+// Search address mapbox
+
+.suggestions-wrapper {
+  position: relative;
+}
+
+.form-control.profile_address {
+  position: relative;
+  z-index: 1;
+}
+
+ul.suggestions {
+  list-style-type: none;
+  padding-left: 0;
+  padding: 10px 0;
+  position: absolute;
+  top: 2px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+
+  li {
+    padding: 8px 30px;
+    width: 100%;
+  }
+  li:hover {
+    color: $dark-blue;
+  }
+}
+
+// Styles for checkboxes
+
+.checkbox {
+  color: $bright-orange;
+  background-color: white;
 }
 
 .form-check-input {
@@ -37,8 +123,4 @@ label.form-check-label.boolean.optional {
   padding: 4px 0;
   color: black;
   margin-left: 10px;
-}
-
-.black-label {
-  color: black;
 }

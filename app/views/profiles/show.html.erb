@@ -29,10 +29,10 @@
               <p class="profile-due-date"><%= "#{current_user.pregnancies.last.week_of_pregnancy} weeks pregnant" %></p>
             </div>
             <div>
-              <%# link_to 'Edit', '#', class: "button-secondary d-block right", data: { bs_toggle: "modal", bs_target: "#exampleModal", turbo: false } %>
-              <button type="button" class="button-secondary d-block right" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <%= link_to 'Edit', '#', class: "button-secondary d-block right", data: { bs_toggle: "modal", bs_target: "#editModal", turbo: false } %>
+              <%# <button type="button" class="button-secondary d-block right" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Edit
-              </button>
+              </button> %>
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@
 
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -53,11 +53,9 @@
         <h5 class="modal-title" id="exampleModalLabel">Edit due date</h5>
       </div>
       <div class="modal-body">
-        <div class="form-control d-non">
+        <div class="form-control">
           <%= simple_form_for [current_user.pregnancies.last] do |f| %>
             <%= f.input :due_date, as: :date, html5: true, label: false %>
-        </div>
-        <div class="button-bottom">
             <%= f.button :submit, "Update", class: 'signup-button' %>
           <% end %>
         </div>
