@@ -72,7 +72,7 @@ class PregnanciesController < ApplicationController
       )
       # respond_to do |format|
       #   format.html { redirect_to new_important_contact_path }
-      redirect_to new_important_contact_path
+      redirect_to new_user_invitation_path
       # end
     else
       render :new, status: :unprocessable_entity
