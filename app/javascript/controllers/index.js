@@ -18,3 +18,6 @@ application.register("map", MapController)
 
 import PregnancyWeekController from "./pregnancy_week_controller.js"
 application.register("pregnancy-week", PregnancyWeekController)
+
+import TasksListController from "./tasks_list_controller.js"
+application.register("tasks-list", TasksListController)
