@@ -77,8 +77,8 @@ Rails.application.configure do
     address: "mail.gmx.net",
     port: 587,
     domain: "gmx.net",
-    user_name: ENV[GMX_MAIL],
-    password: ENV[GMX_PASSWORD],
+    user_name: ENV["GMX_MAIL"],
+    password: ENV["GMX_PASSWORD"],
     authentication: "plain",
     enable_starttls_auto: true
   }
