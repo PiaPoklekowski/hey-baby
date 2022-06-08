@@ -1,10 +1,13 @@
 <div data-controller="pregnancy-week">
-  <% if current_user.pregnancies.last.week_of_pregnancy < 14 %>
-    <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('fetus2.png') %>');">
-  <% elsif current_user.pregnancies.last.week_of_pregnancy < 28 && current_user.pregnancies.last.week_of_pregnancy > 13 %>
-    <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babymiddle.png') %>');">
-  <% else current_user.pregnancies.last.week_of_pregnancy > 27 %>
-    <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babyready.png') %>');">
+  <% if current_user.current_pregnancy != nil %>
+
+    <% if current_user.pregnancies.last.week_of_pregnancy < 14 %>
+      <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('fetus2.png') %>');">
+    <% elsif current_user.pregnancies.last.week_of_pregnancy < 28 && current_user.pregnancies.last.week_of_pregnancy > 13 %>
+      <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babymiddle.png') %>');">
+    <% else current_user.pregnancies.last.week_of_pregnancy > 27 %>
+      <div class="fetus-image dashboard" style="background-image: url('<%= asset_url('babyready.png') %>');">
+    <% end %>
   <% end %>
     <%= render "shared/navbar" %>
   </div>

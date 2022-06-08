@@ -44,6 +44,7 @@ class PregnanciesController < ApplicationController
         name: "Applying for child benefit (Kindergeld)",
         description: "As soon as the birth certificate is available - Create! an account and fill in the form, print, sign and scan and send it to the given address",
         start_time: 44,
+        deadline: 48,
         form_url_de: "https://web.arbeitsagentur.de/opal/kgo-antraggeburt-ui/auswahl",
         category: child_benefit_category,
         pregnancy: @pregnancy
@@ -62,7 +63,7 @@ class PregnanciesController < ApplicationController
         name: "Registering the child to the registry office (Standesamt)",
         description: "Within a week after the birth, register your baby to the registery office in which your baby is born or directly at the hospital.
                     They will issue the birth certificate.",
-        start_time: 40,
+        start_time: 41,
         deadline: 41,
         form_url_de: "https://drive.google.com/file/d/1VkinWa9dQFZGq0KeL-FRjqTU7_-uRa_X/view?usp=sharing",
         form_url_en: "https://drive.google.com/file/d/1l03b7gN0ovwR5dikkgpGN8BmsYJ92AO3/view?usp=sharing",
@@ -177,7 +178,7 @@ class PregnanciesController < ApplicationController
                       after giving birth because of the maternity protection period (Mutterschutz). If the child was premature,
                       if the mother had twins, triplets etc. or if the child was born with a disability, this period can be
                         extended to 12 weeks.",
-        start_time: 40,
+        start_time: 41,
         deadline: 42,
         category: maternity_leave_category,
         pregnancy: @pregnancy
@@ -218,7 +219,7 @@ class PregnanciesController < ApplicationController
 
       # respond_to do |format|
       #   format.html { redirect_to new_important_contact_path }
-      redirect_to new_important_contact_path
+      redirect_to new_user_invitation_path
       # end
     else
       render :new, status: :unprocessable_entity

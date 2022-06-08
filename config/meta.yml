@@ -1,0 +1,5 @@
+meta_product_name: "HeyBaby"
+meta_title: "HeyBaby - Your trustful guide until birth"
+meta_description: "Pregnancy tasks manager in Berlin"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@tytolehardy"   # required for Twitter Cards
