@@ -1,5 +1,8 @@
-<div class="container onboarding onboarding-text" style="background-image: url('<%= asset_url('pregnancy_onboarding.png') %>');">
-  <h2 style=color:white ><%= t "devise.invitations.new.header" %></h2>
+<div class="container onboarding onboarding-text dark-bg" style="background-image: url('<%= asset_url('pregnancy_onboarding.png') %>');">
+  <div class="logo-text">
+    <p>HEY BABY</p>
+    <h1 style=color:white ><%= t "devise.invitations.new.header" %></h1>
+  </div>
 
   <div class="pregnancy-form">
     <%= simple_form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
