@@ -12,6 +12,15 @@
   form {
     width: 100%;
   }
+  .navbar-top {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    .first {
+      text-align: left;
+    }
+  }
 }
 
 .signup-button {
