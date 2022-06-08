@@ -102,7 +102,7 @@ Task.create!(
                 after giving birth because of the maternity protection period (Mutterschutz). If the child was premature,
                 if the mother had twins, triplets etc. or if the child was born with a disability, this period can be
                   extended to 12 weeks.",
-  start_time: 40,
+  start_time: 41,
   deadline: 42,
   category: maternity_leave_category,
   pregnancy: pregnancy_one
@@ -254,7 +254,7 @@ Task.create!(
   name: "Registering the child to the registry office (Standesamt)",
   description: "Within a week after the birth, register your baby to the registery office in which your baby is born or directly at the hospital.
               They will issue the birth certificate.",
-  start_time: 40,
+  start_time: 41,
   deadline: 41,
   form_url_de: "https://drive.google.com/file/d/1VkinWa9dQFZGq0KeL-FRjqTU7_-uRa_X/view?usp=sharing",
   form_url_en: "https://drive.google.com/file/d/1l03b7gN0ovwR5dikkgpGN8BmsYJ92AO3/view?usp=sharing",
