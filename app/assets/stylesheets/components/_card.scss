@@ -173,6 +173,7 @@
   transition: transform 0.3s ease;
   padding: 12px 30px 20px 50px;
   width: 100%;
+  z-index: 5;
 
   &.hide{
     transform: translate(0px, 250px);
