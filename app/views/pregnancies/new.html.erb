@@ -1,21 +1,15 @@
-<div class="container onboarding onboarding-text" style="background-image: url('<%= asset_url('pregnancy_onboarding.png') %>');">
+<div class="container onboarding onboarding-text dark-bg" style="background-image: url('<%= asset_url('pregnancy_onboarding.png') %>');">
   <div class="logo-text">
     <p>HEY BABY</p>
+    <h1>Pregnancy</h1>
   </div>
   <div class="onboarding-content">
-    <div>
-      <h1>Pregnancy</h1>
-    </div>
-    <div class="pregnancy-form">
-      <%= simple_form_for [@pregnancy] do |f| %>
-        <%#= f.input :pregnancy_week, label: false, placeholder: "Pregnancy week" %>
-        <%= f.input :baby_nickname, label: false, placeholder: "Baby nickname" %>
-        <%= f.input :gender, collection: Pregnancy::GENDERS, placeholder: "Gender" %>
-        <%= f.input :due_date, as: :date, html5: true %>
-    </div>
-    <div class="button-bottom">
-        <%= f.button :submit, "Next", class: 'signup-button' %>
-      <% end %>
-    </div>
+    <%= simple_form_for [@pregnancy] do |f| %>
+      <%#= f.input :pregnancy_week, label: false, placeholder: "Pregnancy week" %>
+      <%= f.input :baby_nickname, label: false, placeholder: "Baby nickname" %>
+      <%= f.input :gender, collection: Pregnancy::GENDERS, placeholder: "Gender" %>
+      <%= f.input :due_date, as: :date, html5: true %>
+      <%= f.button :submit, "Next", class: 'signup-button' %>
+    <% end %>
   </div>
 </div>

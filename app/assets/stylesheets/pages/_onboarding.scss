@@ -2,6 +2,15 @@
   height: 100vh;
   background-size: cover;
   padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 3.75rem;
+  }
+  form {
+    width: 100%;
+  }
 }
 
 .onboarding-text {
@@ -15,50 +24,37 @@
 .signup-button {
   background-color: $bright-orange;
   color: white;
-  border-radius: 25px;
+  border-radius: 30px;
   width: 100%;
+  padding: 10px 16px;
+  margin: 10px 0 20px;
   text-align: center;
-  padding: 10px;
 }
 
 .contact-primary-button {
   background-color: $orange;
   color: $dark-red;
-  border-radius: 18px;
-  width: 100%;
-  height: 48px;
 }
 
 .contact-secondary-button {
-  margin-bottom: 24px;
   color: white;
   border-radius: 18px;
   width: 100%;
-  height: 48px;
+  padding: 10px 16px;
   text-align: center;
   display: inline-block;
-  margin-top: 10px;
 }
 
 .logo-text {
   text-align: center;
   font-weight: 700;
-  height: 8vh;
+  margin-top: 20px;
 }
 
 .logo-text-sign {
   text-align: center;
   font-weight: 700;
-  height: 8vh;
   color: black;
-}
-
-.onboarding-content {
-  height: 84vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .pregnancy-form {
