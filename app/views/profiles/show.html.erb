@@ -29,8 +29,9 @@
               <p class="profile-due-date"><%= "#{current_user.pregnancies.last.week_of_pregnancy} weeks pregnant" %></p>
             </div>
             <div>
+              <%# link_to 'Edit', '#', class: "button-secondary d-block right", data: { bs_toggle: "modal", bs_target: "#exampleModal", turbo: false } %>
               <button type="button" class="button-secondary d-block right" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Edit
+                Edit
               </button>
             </div>
           </div>

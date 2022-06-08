@@ -1,5 +1,60 @@
 <%= render "shared/navbar_show" %>
 
+<%# Gynecologist %>
+<% if @task.name == "First examination ultrasound scan" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Get your pregnancy certificate from your Gynecologist" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Second examination" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Anatomy ultrasound (Feindiagnostik) or 3D scan" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Gestational diabetes test" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Third examination" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
 <%# Hospital %>
 
 <% if @task.name == "Find a hospital and book an appointment" %>
@@ -42,7 +97,77 @@
     <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
     <hr>
     <p><%= @task.description %></p>
+    <p>Required documents:</p>
+      <ul>
+        <li>Birth announcement will be send by the hospital</li>
+        <li>Declaration of both parents about the first name and surname of the child (signed)</li>
+        <li>Valid identity card or passport of parents</li>
+        <li>mother's and father's birth certificate</li>
+        <li>if applicable, marriage certificate</li>
+      </ul>
+
     <%= render "drive_button", task: @task %>
+  </div>
+<% end %>
+
+<%# Maternity Leave %>
+
+<% if @task.name == "Inform your employer about your pregnancy" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Your maternity leave before the birth starts!" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Reporting the birth to employer" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<%# Maternity Allowance %>
+
+<% if @task.name == "Apply for the maternity Allowance" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<% if @task.name == "Reporting the birth to your Krankenkasse" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+  </div>
+<% end %>
+
+<%# Paternity %>
+
+<% if @task.name == "Acknowledgment of paternity" %>
+  <div class="container">
+    <h1><%= @task.name %></h1>
+    <h5 class="task-timer"><%= "week #{@task.start_time} until #{@task.deadline}" %></h5>
+    <hr>
+    <p><%= @task.description %></p>
+    <%= render "form_button", task: @task %>
   </div>
 <% end %>
 

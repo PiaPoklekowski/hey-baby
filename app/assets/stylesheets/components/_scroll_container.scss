@@ -11,9 +11,7 @@
 .weeks-container {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  overflow: scroll;
-  padding-left: 29vw;
+  overflow: hidden;
 }
 
 .scroll-container::-webkit-scrollbar {
