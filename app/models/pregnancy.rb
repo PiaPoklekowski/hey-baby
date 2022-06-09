@@ -1,5 +1,5 @@
 class Pregnancy < ApplicationRecord
-  GENDERS = ["Girl", "Boy", "Undefined"]
+  GENDERS = ["Girl", "Boy", "I don't know yet"]
 
   belongs_to :mother, class_name: "User"
   belongs_to :partner, class_name: "User", optional: true
