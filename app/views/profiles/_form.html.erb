@@ -6,7 +6,7 @@
               wrapper_html: {data: {
               controller: "address-autocomplete",
               address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}, class: "form-control"} %>
-  <%= f.input :birthdate, as: :string, input_html: {type: :date}, start_year: Date.today.year - 50,
+  <%# f.input :birthdate, as: :string, input_html: {type: :date}, start_year: Date.today.year - 50,
                             end_year: Date.today.year - 12,
                             order: [:day, :month, :year], placeholder: "Birthdate" %>
   <%= f.button :submit, "Next", class: 'signup-button' %>
